@@ -21,9 +21,20 @@
 		// 지도를 생성한다 
 		var map = new kakao.maps.Map(mapContainer, mapOption); 
 
+		// 마커 이미지의 주소
+		var markerImageUrl = 'https://ghon2023.github.io/PreAHPND/marker-red.svg',
+		    markerImageSize = new kakao.maps.Size(40, 42),   // 마커 이미지의 크기
+		    markerImageOptions = {
+			    offset : new kakao.maps.Point(25, 20)  // 마커 좌표에 일치시킬 이미지 안의 좌표
+		    };
+
+		// 마커 이미지를 생성한다
+		var markerImage = new kakao.maps.MarkerImage(markerImageUrl, markerImageSize, markerImageOptions);
+
 		// 지도에 마커를 생성하고 표시한다		
 		var marker = new kakao.maps.Marker({
 		    position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌료 1
+		    image : markerImage,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
