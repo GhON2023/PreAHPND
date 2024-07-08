@@ -22,26 +22,17 @@
 		var map = new kakao.maps.Map(mapContainer, mapOption); 
 
 		// 지도에 마커를 생성하고 표시한다		
-		//var marker = new kakao.maps.Marker({
+		var marker = new kakao.maps.Marker({
 		    //position: new kakao.maps.LatLng(37.56756, 126.98147), // 마커의 좌표
-		//    position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌표
-		//    map: map // 마커를 표시할 지도 객체
-		//});
-
-		// 지도에 마커를 생성하고 표시한다 (여러개)
-		var markers = [];
+		    position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.9949089, 126.3342369) // 마커의 좌표
-		});
-		marker.SetMap(map);
-
-		markers.push(marker);
-
-		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.0853164, 126.3903314) // 마커의 좌표
-		});
-		marker.SetMap(map);
+		    //position: new kakao.maps.LatLng(37.56756, 126.98147), // 마커의 좌표
+		    position: new kakao.maps.LatLng(35.0853164,  126.3903314), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		});		
 		
 		//var marker = new kakao.maps.LatLng(35.0853164, 126.3903314)  // 마커 2
 
