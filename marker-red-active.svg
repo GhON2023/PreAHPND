@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<svg width="16" height="19.749999999999996" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" data-name="레이어 2">
+ <defs>
+  <style>.cls-1 {
+    fill: rgb(255 0 0);
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    }</style>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <g data-name=" 레이어 2" id="_레이어_2-2">
+   <g data-name=" 레이어 1-2" id="_레이어_1-2">
+    <path class="cls-1" d="m15.5,8c0,7.14 -7.5,11.25 -7.5,11.25c0,0 -7.5,-4.11 -7.5,-11.25c0,-4.14 3.36,-7.5 7.5,-7.5s7.5,3.36 7.5,7.5z" fill="#ff0000" id="svg_1"/>
+   </g>
+  </g>
+ </g>
+</svg>
