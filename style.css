@@ -120,7 +120,7 @@
 .status {
   margin: 0px 3px 0px 3px;
   /* height: 67px; */
-  height: 140px;
+  height: 180px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
