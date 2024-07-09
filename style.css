@@ -1,0 +1,92 @@
+/* .product-title {
+    text-align:center;
+    display:table;
+    border:1px solid #be2a2a;
+    width:280px;
+    height:250px;
+}
+
+.product-img-div {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.product-img {
+    max-width:180px;
+    max-height:180px;
+} */
+
+.image1 {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 100px;
+    left: 200px;
+    /* margin-top: 200px;
+    margin-left: 300px; */
+
+    /* background-image: url("E:/개발자료/한국수산방역기술/Sources/1.jpg"); */
+    background-image: url("https://ghon2023.github.io/PreAHPND/1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:1px solid black;
+}
+
+.image1:hover{
+    cursor: pointer;
+}
+
+.image2 {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 100px;
+    left: 700px;
+
+    /* margin-top: 0px;
+    margin-left: 800px; */
+
+    /* background-image: url("E:/개발자료/한국수산방역기술/Sources/1.jpg"); */
+    background-image: url("https://ghon2023.github.io/PreAHPND/2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:1px solid black;
+}
+
+.image3 {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 500px;
+    left: 200px;
+
+    /* margin-top: 0px;
+    margin-left: 800px; */
+
+    /* background-image: url("E:/개발자료/한국수산방역기술/Sources/1.jpg"); */
+    background-image: url("https://ghon2023.github.io/PreAHPND/3.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:1px solid black;
+}
+
+.image4 {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 500px;
+    left: 700px;
+
+    /* margin-top: 0px;
+    margin-left: 800px; */
+
+    /* background-image: url("E:/개발자료/한국수산방역기술/Sources/1.jpg"); */
+    background-image: url("https://ghon2023.github.io/PreAHPND/4.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:1px solid black;
+}
