@@ -290,7 +290,7 @@
 
 		var result = '<div class="iconDetail">' +
 			        '   <div class="title">' +
-			        '       <ti>' + '#' + id + '</ti>' +
+			        '       <ti>' + '#3001</ti>' +
 			        '   </div >' +
 			        '   <div class="status">' +
 			        '       <title_1>ALT</title_1>' +
@@ -306,8 +306,10 @@
 		// 커스텀 오버레이를 생성합니다.
 		var customOverlay = new kakao.maps.CustomOverlay({
                     position: position,
-		    content: result   
+		    content: result,
+		    yAnchor: 1
 		    //context: grid-container
+		    //position: marker.getPosition(),
                 });
 
                 // 커스텀 오버레이를 지도에 표시하니다.
