@@ -26,7 +26,7 @@
 		
 		// 마커 이미지의 주소 - Red (위험)
 		var markerImageUrl1 = "https://ghon2023.github.io/PreAHPND/marker-red.svg",
-		    markerImageSize1 = new kakao.maps.Size(36, 36),   // 마커 이미지의 크기  40, 42
+		    markerImageSize1 = new kakao.maps.Size(30, 36),   // 마커 이미지의 크기  40, 42
 		    markerImageOptions1 = {
 			    offset : new kakao.maps.Point(25, 20)  // 마커 좌표에 일치시킬 이미지 안의 좌표
 		    };
@@ -40,14 +40,14 @@
 
 		// 마커 이미지의 주소 - Brown (주의)
 		var markerImageUrl3 = 'https://ghon2023.github.io/PreAHPND/marker-brown.svg',
-		    markerImageSize3 = new kakao.maps.Size(40, 42),   // 마커 이미지의 크기  40, 42
+		    markerImageSize3 = new kakao.maps.Size(30, 36),   // 마커 이미지의 크기  40, 42
 		    markerImageOptions3 = {
 			    offset : new kakao.maps.Point(25, 20)  // 마커 좌표에 일치시킬 이미지 안의 좌표
 		    };
 
 		// 마커 이미지의 주소 - Orange (경고)
 		var markerImageUrl4 = 'https://ghon2023.github.io/PreAHPND/marker-orange.svg',
-		    markerImageSize4 = new kakao.maps.Size(40, 42),   // 마커 이미지의 크기  40, 42
+		    markerImageSize4 = new kakao.maps.Size(30, 36),   // 마커 이미지의 크기  40, 42
 		    markerImageOptions4 = {
 			    offset : new kakao.maps.Point(25, 20)  // 마커 좌표에 일치시킬 이미지 안의 좌표
 		    };
@@ -61,139 +61,143 @@
 
 		// 지도에 마커를 생성하고 표시한다		
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌료 1
+		    position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌표 1  전남 무안군 망운면 송현리 1070-5
 		    image : markerImageRed,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.0853164,  126.3903314), // 마커의 좌표 2
+		    position: new kakao.maps.LatLng(35.0853164,  126.3903314), // 마커의 좌표 2  전남 무안군 현경면 용정리 6-3
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.8772474, 126.1084462), // 마커의 좌표 3
+		    position: new kakao.maps.LatLng(34.8772474, 126.1084462), // 마커의 좌표 3  전남 신안군 암태면 신석리 2571-7
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.9203515, 126.3052525), // 마커의 좌표 4
+		    position: new kakao.maps.LatLng(34.9203515, 126.3052525), // 마커의 좌표 4  전남 신안군 압해읍 가룡리 134-24 
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.918075, 126.0892764), // 마커의 좌표 5
+		    position: new kakao.maps.LatLng(34.918075, 126.0892764), // 마커의 좌표 5  전남 신안군 자은면 한운리 1-6
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.9968078, 126.1813083), // 마커의 좌표 6
+		    position: new kakao.maps.LatLng(34.9968078, 126.1813083), // 마커의 좌표 6  전남 신안군 증도면 대초리 1648-10
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.0319162, 126.1493091), // 마커의 좌표 7
+		    position: new kakao.maps.LatLng(35.0319162, 126.1493091), // 마커의 좌표 7  전남 신안군 지도읍 당촌길 181-118
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.7940935, 126.1712666), // 마커의 좌표 8
+		    position: new kakao.maps.LatLng(34.7940935, 126.1712666), // 마커의 좌표 8  전남 신안군 팔금면 당고리 20-1
+		    image : markerImageBrown,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.7001934, 126.1678169), // 마커의 좌표 9
+		    position: new kakao.maps.LatLng(34.7001934, 126.1678169), // 마커의 좌표 9  전남 신안군 안좌면 복호리 73-18
+		    image : markerImageBrown,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.6021133, 127.7402856), // 마커의 좌표 10
+		    position: new kakao.maps.LatLng(34.6021133, 127.7402856), // 마커의 좌표 10  전남 여수시 돌산읍 신복리 1111-19
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.1699107, 126.3597618), // 마커의 좌표 11
+		    position: new kakao.maps.LatLng(35.1699107, 126.3597618), // 마커의 좌표 11  전남 영광군 염산면 향화로 1
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.3047101, 126.678933), // 마커의 좌표 12
+		    position: new kakao.maps.LatLng(34.3047101, 126.678933), // 마커의 좌표 12  전남 완도군 완도읍 정도리 830-12
+		    image : markerImageRed,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.426068, 126.4826311), // 마커의 좌표 13
+		    position: new kakao.maps.LatLng(34.426068, 126.4826311), // 마커의 좌표 13  전남 해남군 화산면 평호리 395-39
+		    image : markerImageRed,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.8519968, 126.8513189), // 마커의 좌표 14
+		    position: new kakao.maps.LatLng(36.8519968, 126.8513189), // 마커의 좌표 14  충남 아산시 인주면 대음리 277-3
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.9617854, 126.333786), // 마커의 좌표 15
+		    position: new kakao.maps.LatLng(36.9617854, 126.333786), // 마커의 좌표 15  충남 서산시 대산읍 오지리 338-45
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.8272498, 126.3270157), // 마커의 좌표 16
+		    position: new kakao.maps.LatLng(36.8272498, 126.3270157), // 마커의 좌표 16  충남 서산시 팔봉면 호리 621-3
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.589336, 126.3148374), // 마커의 좌표 17
+		    position: new kakao.maps.LatLng(36.589336, 126.3148374), // 마커의 좌표 17  충남 태안군 남면 신온리 드르니항
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.5991061, 126.3831177), // 마커의 좌표 18
+		    position: new kakao.maps.LatLng(36.5991061, 126.3831177), // 마커의 좌표 18  충남 태안군 안면읍 황도리 26-4
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.0548241, 126.6319321), // 마커의 좌표 19
+		    position: new kakao.maps.LatLng(36.0548241, 126.6319321), // 마커의 좌표 19  충남 서천군 마서면 죽산리산 4-22
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.5725956, 126.6352721), // 마커의 좌표 20
+		    position: new kakao.maps.LatLng(35.5725956, 126.6352721), // 마커의 좌표 20  전북 고창군 부안면 상암리 446
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.5312691, 126.5143343), // 마커의 좌표 21
+		    position: new kakao.maps.LatLng(35.5312691, 126.5143343), // 마커의 좌표 21  전북 고창군 심원면 만돌리 735-1
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(37.5933287, 126.4395052), // 마커의 좌표 22
+		    position: new kakao.maps.LatLng(37.5933287, 126.4395052), // 마커의 좌표 22  인천 강화군 화도면 동막리 산 126-2
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(37.7011337, 126.3798797), // 마커의 좌표 23
+		    position: new kakao.maps.LatLng(37.7011337, 126.3798797), // 마커의 좌표 23  인천 강화군 내가면 해안서로 889
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.9417083, 128.2194369), // 마커의 좌표 24
+		    position: new kakao.maps.LatLng(34.9417083, 128.2194369), // 마커의 좌표 24  경남 고성군 하일면 용태리 335-3
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.3467973, 129.3249957), // 마커의 좌표 25
+		    position: new kakao.maps.LatLng(35.3467973, 129.3249957), // 마커의 좌표 25  울산광역시 울주군 서생면 신암리 291-54
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
