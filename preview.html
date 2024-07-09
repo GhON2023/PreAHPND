@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="style.css" />
 	
 	<!-- 오버레이 테스트 -->
-	<style>
+	<!-- <style>
 	   .grid-container {
 	      display: inline-grid;
 	      grid-template-columns: 100px 100px;
@@ -22,7 +22,7 @@
 	        padding: 5px 0;
 	        font-size: 14px;
 	     }
-	 </style>
+	 </style>  -->
 </head>
 <body>
 	<!-- <div id="map" style="width:1200px;height:800px;"></div> -->
@@ -288,13 +288,25 @@
 			       '<div>17</div>' +
 			      '</div>';
 
+		var result = '<div class="iconDetail">' +
+			        '   <div class="title">' +
+			        '       <ti>' + '#' + id + '</ti>' +
+			        '   </div >' +
+			        '   <div class="status">' +
+			        '       <title_1>ALT</title_1>' +
+			        '       <title_2>SPD</title_2>' +
+			        '       <value_1>' + alt + ' m' + '</value_1>' +
+			        '       <value_2>' + spd + ' m/s' + '</value_2>' +
+			        '   </div>' +
+			        '</div>';
+
 		// 커스텀 오버레이가 표시될 위치입니다.
 		var position = new kakao.maps.LatLng(35.3467973, 129.3249957);
 
 		// 커스텀 오버레이를 생성합니다.
 		var customOverlay = new kakao.maps.CustomOverlay({
                     position: position,
-		    content: content   
+		    content: result   
 		    //context: grid-container
                 });
 
