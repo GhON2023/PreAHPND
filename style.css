@@ -130,6 +130,7 @@
   background: rgb(243, 239, 239);
   font-size: 12px;
   font-weight: bold;
+  border: 1px solid;
   border-radius: 10px;
 }
 
