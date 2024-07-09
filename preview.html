@@ -15,7 +15,7 @@
 		        //center: new kakao.maps.LatLng(37.56756, 126.98147), // 지도의 중심좌표
 			center: new kakao.maps.LatLng(34.9949089, 126.3342369), // 지도의 중심좌표
 			    
-		        level: 12, // 지도의 확대 레벨
+		        level: 13, // 지도의 확대 레벨
 		        mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
 		    }; 
 
@@ -59,7 +59,7 @@
 		var markerImageOrange = new kakao.maps.MarkerImage(markerImageUrl4, markerImageSize4, markerImageOptions4);
 		
 
-		// 관심: 13    주의:     경고:       위험 : 2
+		// 관심(green): 13    주의(brown): 2    경고(orange): 8      위험(red) : 2
 		// 지도에 마커를 생성하고 표시한다		
 		var marker = new kakao.maps.Marker({
 		    position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌표 1  전남 무안군 망운면 송현리 1070-5
