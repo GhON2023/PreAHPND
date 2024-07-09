@@ -149,8 +149,26 @@
     margin-top: 3px;
   }
 
+.status title_4 {
+    grid-column: 1;
+    grid-row: 4;
+    margin-top: 3px;
+  }
+
+.status title_5 {
+    grid-column: 1;
+    grid-row: 5;
+    margin-top: 3px;
+  }
+
+.status title_6 {
+    grid-column: 1;
+    grid-row: 6;
+    margin-top: 3px;
+  }
+
 .status value {
-  color: white;
+  color: rgb(66, 64, 64);
   text-align: center;
   background: black;
   font-size: 12px;
@@ -160,7 +178,7 @@
 
 .status value_1 {
   grid-column: 2;
-  color: white;
+  color: rgb(66, 64, 64);
   font-weight: normal;
   font-size: 12px;
   margin-top: 3px;
@@ -183,6 +201,34 @@
     font-size: 12px;
     margin-top: 3px;
   }
+
+ .status value_4 {
+    grid-column: 2;
+    grid-row: 4;
+    color: rgb(66, 64, 64);
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+ .status value_5 {
+    grid-column: 2;
+    grid-row: 5;
+    color: rgb(66, 64, 64);
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+ .status value_6 {
+    grid-column: 2;
+    grid-row: 6;
+    color: rgb(66, 64, 64);
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
 
 .iconDetail:after {
   content: ‘’;
