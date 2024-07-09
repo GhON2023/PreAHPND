@@ -3,9 +3,44 @@
 <head>
 	<meta charset="utf-8">
 	<title>예측 시스템</title>
+
+	<!-- 오버레이 테스트 -->
+	<style>
+	   .grid-container {
+	      display: inline-grid;
+	      grid-template-columns: 100px 100px;
+	      gap: 2px;
+	      background-color: rgb(185, 187, 199);
+	      padding: 3px;
+	    }
+	
+	     .grid-container > div {
+	        background-color: rgba(255, 255, 255, 0.8);
+	        text-align: center;
+	        padding: 5px 0;
+	        font-size: 14px;
+	     }
+	 </style>
 </head>
 <body>
 	<!-- <div id="map" style="width:1200px;height:800px;"></div> -->
+	<!-- 오버레이 테스트 -->
+	<div class="grid-container">
+	   <div>지역</div>
+	   <div>전남 해남</div>
+	   <div>단계</div>
+	   <div>위험</div>
+	   <div>예측지수</div>
+	   <div>88</div>
+	   <div>수온</div>
+	   <div>24.6</div>
+	   <div>염분</div>
+	   <div>32</div>
+	   <div>유속(cm/s)</div>
+	   <div>17</div>
+	 </div>
+
+	
 	<div id="map" style="width:100%;height:100vh;"></div>
 
 	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e1d481163c25821c1aafcee9d7a1fb65"></script>
@@ -216,28 +251,37 @@
 		//position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌표
 		//35.0853164  126.3903314
 
-    // 마커가 표시될 위치 -2
-    //var markerPosition = new kakao.maps.LatLan(37.56756, 126.98147);
+		// 마커가 표시될 위치 -2
+		//var markerPosition = new kakao.maps.LatLan(37.56756, 126.98147);
+		
+		// 마커를 생성한다 (표시될 위치를 객체 형태로 삽입) - 2
+		//var marker = new kakao.maps.Marker({
+		//    position: markerPosition
+		//});
+		
+		// 마커가 지도 위에 표시되도록 설정한다
+		function setCenter(lat, lng)
+		{
+		   marker.setMap(null);  // 마커지움
+		   var mp = new kakao.maps.LatLng(lat, lng);   // 맵과 마커의 위치
+		   map.setCenter(mp);   // 맵 이동
+		   marker = new kakao.maps.Marker({ position: mp});    // 새로 만들어줘야 새로 그려진다.
+		   marker.setMap(map);   // 마커 그림
+		}
 
-    // 마커를 생성한다 (표시될 위치를 객체 형태로 삽입) - 2
-    //var marker = new kakao.maps.Marker({
-    //    position: markerPosition
-    //});
+		// 커스텀 오버레이가 표시될 위치입니다.
+		var position = new kakao.maps.LatLng(35.3467973, 129.3249957);
 
-    // 마커가 지도 위에 표시되도록 설정한다
-    function setCenter(lat, lng)
-    {
-       marker.setMap(null);  // 마커지움
-       var mp = new kakao.maps.LatLng(lat, lng);   // 맵과 마커의 위치
-       map.setCenter(mp);   // 맵 이동
-       marker = new kakao.maps.Marker({ position: mp});    // 새로 만들어줘야 새로 그려진다.
-       marker.setMap(map);   // 마커 그림
-    }
-
-    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다.
-    // marker.seteMap(null);
-    
-
-	</script>
-</body>
+		// 커스텀 오버레이를 생성합니다.
+		var customOverlay = new kakao.maps.CustomOverlay({
+                    position: position,
+		    context: grid-container
+                    //content: content   
+                });
+		
+		// 아래 코드는 지도 위의 마커를 제거하는 코드입니다.
+		// marker.seteMap(null);
+   	   </script>
+	
+    </body>
 </html>
