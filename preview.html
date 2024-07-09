@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>다음 지도 API</title>
+</head>
+<body>
+	<div id="map" style="width:1200px;height:800px;"></div>
+
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e1d481163c25821c1aafcee9d7a1fb65"></script>
+	<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		    mapOption = {
+		        //center: new kakao.maps.LatLng(37.56756, 126.98147), // 지도의 중심좌표
+			center: new kakao.maps.LatLng(34.9949089, 126.3342369), // 지도의 중심좌표
+			    
+		        level: 12, // 지도의 확대 레벨
+		        mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+		    }; 
+
+		// 지도를 생성한다 
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+		// 마커 이미지의 주소 - Red (위험)
+		var markerImageUrl1 = 'https://ghon2023.github.io/PreAHPND/marker-red.svg',
+		    markerImageSize1 = new kakao.maps.Size(36, 36),   // 마커 이미지의 크기  40, 42
+		    markerImageOptions1 = {
+			    offset : new kakao.maps.Point(25, 20)  // 마커 좌표에 일치시킬 이미지 안의 좌표
+		    };
+
+		// 마커 이미지의 주소 - Green (관심)
+		var markerImageUrl2 = 'https://ghon2023.github.io/PreAHPND/marker-green.svg',
+		    markerImageSize2 = new kakao.maps.Size(30, 36),   // 마커 이미지의 크기  40, 42
+		    markerImageOptions2 = {
+			    offset : new kakao.maps.Point(25, 20)  // 마커 좌표에 일치시킬 이미지 안의 좌표
+		    };
+
+		// 마커 이미지의 주소 - Brown (주의)
+		var markerImageUrl3 = 'https://ghon2023.github.io/PreAHPND/marker-brown.svg',
+		    markerImageSize3 = new kakao.maps.Size(40, 42),   // 마커 이미지의 크기  40, 42
+		    markerImageOptions3 = {
+			    offset : new kakao.maps.Point(25, 20)  // 마커 좌표에 일치시킬 이미지 안의 좌표
+		    };
+
+		// 마커 이미지의 주소 - Orange (경고)
+		var markerImageUrl4 = 'https://ghon2023.github.io/PreAHPND/marker-orange.svg',
+		    markerImageSize4 = new kakao.maps.Size(40, 42),   // 마커 이미지의 크기  40, 42
+		    markerImageOptions4 = {
+			    offset : new kakao.maps.Point(25, 20)  // 마커 좌표에 일치시킬 이미지 안의 좌표
+		    };
+
+		// 마커 이미지를 생성한다
+		var markerImageRed = new kakao.maps.MarkerImage(markerImageUrl1, markerImageSize1, markerImageOptions1);
+		var markerImageGreen = new kakao.maps.MarkerImage(markerImageUrl2, markerImageSize2, markerImageOptions2);
+		var markerImageBrown = new kakao.maps.MarkerImage(markerImageUrl3, markerImageSize3, markerImageOptions3);
+		var markerImageOrange = new kakao.maps.MarkerImage(markerImageUrl3, markerImageSize4, markerImageOptions4);
+		
+
+		// 지도에 마커를 생성하고 표시한다		
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌료 1
+		    image : markerImageRed,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.0853164,  126.3903314), // 마커의 좌표 2
+		    map: map // 마커를 표시할 지도 객체
+		});		
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.8772474, 126.1084462), // 마커의 좌표 3
+		    map: map // 마커를 표시할 지도 객체
+		});		
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.9203515, 126.3052525), // 마커의 좌표 4
+		    map: map // 마커를 표시할 지도 객체
+		});		
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.918075, 126.0892764), // 마커의 좌표 5
+		    map: map // 마커를 표시할 지도 객체
+		});		
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.9968078, 126.1813083), // 마커의 좌표 6
+		    map: map // 마커를 표시할 지도 객체
+		});		
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.0319162, 126.1493091), // 마커의 좌표 7
+		    map: map // 마커를 표시할 지도 객체
+		});		
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.7940935, 126.1712666), // 마커의 좌표 8
+		    map: map // 마커를 표시할 지도 객체
+		});		
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.7001934, 126.1678169), // 마커의 좌표 9
+		    map: map // 마커를 표시할 지도 객체
+		});		
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.6021133, 127.7402856), // 마커의 좌표 10
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.1699107, 126.3597618), // 마커의 좌표 11
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.3047101, 126.678933), // 마커의 좌표 12
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.426068, 126.4826311), // 마커의 좌표 13
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.8519968, 126.8513189), // 마커의 좌표 14
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.9617854, 126.333786), // 마커의 좌표 15
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.8272498, 126.3270157), // 마커의 좌표 16
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.589336, 126.3148374), // 마커의 좌표 17
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.5991061, 126.3831177), // 마커의 좌표 18
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(36.0548241, 126.6319321), // 마커의 좌표 19
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.5725956, 126.6352721), // 마커의 좌표 20
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.5312691, 126.5143343), // 마커의 좌표 21
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(37.5933287, 126.4395052), // 마커의 좌표 22
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(37.7011337, 126.3798797), // 마커의 좌표 23
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.9417083, 128.2194369), // 마커의 좌표 24
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(35.3467973, 129.3249957), // 마커의 좌표 25
+		    image : markerImageGreen,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});
+		
+		//var marker = new kakao.maps.LatLng(35.0853164, 126.3903314)  // 마커 2
+
+		//position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌표
+		//35.0853164  126.3903314
+
+    // 마커가 표시될 위치 -2
+    //var markerPosition = new kakao.maps.LatLan(37.56756, 126.98147);
+
+    // 마커를 생성한다 (표시될 위치를 객체 형태로 삽입) - 2
+    //var marker = new kakao.maps.Marker({
+    //    position: markerPosition
+    //});
+
+    // 마커가 지도 위에 표시되도록 설정한다
+    function setCenter(lat, lng)
+    {
+       marker.setMap(null);  // 마커지움
+       var mp = new kakao.maps.LatLng(lat, lng);   // 맵과 마커의 위치
+       map.setCenter(mp);   // 맵 이동
+       marker = new kakao.maps.Marker({ position: mp});    // 새로 만들어줘야 새로 그려진다.
+       marker.setMap(map);   // 마커 그림
+    }
+
+    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다.
+    // marker.seteMap(null);
+    
+
+	</script>
+</body>
+</html>
