@@ -270,7 +270,21 @@
 		}
 
 		// 커스텀 오버레이에 표시할 내용입니다.
-		var context = '<div class="grid-container"><div>지역</div><div>전남 해남</div><div>단계</div><div>위험</div><div>예측지수</div><div>88</div><div>수온</div><div>24.6</div><div>염분</div><div>32</div><div>유속(cm/s)</div><div>17</div></div>';
+		//var context = '<div class="grid-container"><div>지역</div><div>전남 해남</div><div>단계</div><div>위험</div><div>예측지수</div><div>88</div><div>수온</div><div>24.6</div><div>염분</div><div>32</div><div>유속(cm/s)</div><div>17</div></div>';
+		var context = '<div class="grid-container">' +
+			       '<div>지역</div>' +
+			       '<div>전남 해남</div>' +
+			       '<div>단계</div>' +
+			       '<div>위험</div>' +
+			       '<div>예측지수</div>' +
+			       '<div>88</div>' +
+			       '<div>수온</div>' +
+			       '<div>24.6</div>' +
+			       '<div>염분</div>' +
+			       '<div>32</div>' +
+			       '<div>유속(cm/s)</div>' +
+			       '<div>17</div>' +
+			      '</div>';
 
 		// 커스텀 오버레이가 표시될 위치입니다.
 		var position = new kakao.maps.LatLng(35.3467973, 129.3249957);
