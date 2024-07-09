@@ -101,7 +101,7 @@
   background: white;
   width: 200px;
   height: 200px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .title {
@@ -121,8 +121,7 @@
   margin: 0px 3px 0px 3px;
   /* height: 67px; */
   height: 120px;
-  /* display: grid; */
-  display: inline-grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   color: rgb(10, 10, 10);
@@ -130,8 +129,8 @@
   background: rgb(243, 239, 239);
   font-size: 12px;
   font-weight: bold;
-  border: 1px solid;
-  border-radius: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .status title_1 {
