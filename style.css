@@ -134,7 +134,7 @@
   grid-gap: 2px white;
   /* color: rgb(10, 10, 10); */
   color: rgb(48, 48, 48);
-  text-align: center;
+  /*text-align: center;*/
   justify-content: center;            /* 중앙정렬 */
   background: rgb(243, 239, 239);
   font-size: 12px;
@@ -147,7 +147,7 @@
   grid-column: 1;
   grid-row: 1;
   /* margin-top: 3px; */
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   border: 1px solid white;
 }
 
@@ -205,10 +205,11 @@
 
 .status value_1 {
   grid-column: 2;
+  grid-row: 1;
   color: rgb(66, 64, 64);
   font-weight: normal;
   font-size: 12px;  
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   /* margin-top: 3px; */
   border: 1px solid white;
 }
