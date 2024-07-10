@@ -123,7 +123,7 @@
 
 .status {
   /*margin: 0px 3px 0px 3px;*/
-  margin: 5px 3px 5px 10px;
+  margin: 5px 5px 5px 5px;
   /* height: 67px; */
   height: 180px;
   display: grid;
@@ -135,9 +135,11 @@
   /* color: rgb(10, 10, 10); */
   color: rgb(48, 48, 48);
   text-align: center;
+  justify-content: center;            /* 중앙정렬 */
   background: rgb(243, 239, 239);
   font-size: 12px;
   font-weight: bold;  
+  border: 1px solid white;
   /* border-radius: 5px; */
 }
 
@@ -145,7 +147,7 @@
   grid-column: 1;
   grid-row: 1;
   /* margin-top: 3px; */
-  margin-top: 10px  
+  transform: translate(-50%, -50%);
   border: 1px solid white;
 }
 
@@ -205,8 +207,8 @@
   grid-column: 2;
   color: rgb(66, 64, 64);
   font-weight: normal;
-  font-size: 12px;
-  margin-top: 10px  
+  font-size: 12px;  
+  transform: translate(-50%, -50%);
   /* margin-top: 3px; */
   border: 1px solid white;
 }
