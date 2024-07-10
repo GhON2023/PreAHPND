@@ -102,6 +102,7 @@
   width: 200px;
   height: 220px;
   border-radius: 5px;
+  background: url(‘https://ghon2023.github.io/PreAHPND/box_movie_white.png’);
 }
 
 /*
@@ -130,6 +131,7 @@
   /* grid-template-columns: 1fr 1fr; */
   /* grid-template-rows: 1fr 1fr; */
   grid-template-rows: 30px    
+  grid-gap: 2px white;
   /* color: rgb(10, 10, 10); */
   color: rgb(48, 48, 48);
   text-align: center;
@@ -269,7 +271,7 @@
     border: 1px solid white;
   }
 
-
+/*
 .iconDetail:after {
   content: ‘’;
   position: absolute;
@@ -278,7 +280,7 @@
   bottom: -12px;
   width: 22px;
   height: 12px;
-  background: url(‘https://ghon2023.github.io/PreAHPND/box_movie_white.png’);
+  background: url(‘https://ghon2023.github.io/PreAHPND/box_movie_white.png’); */
   /* background: url(‘https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png’); */
 }
 
