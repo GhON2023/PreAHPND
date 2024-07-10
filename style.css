@@ -100,22 +100,26 @@
   float: left;
   background: white;
   width: 200px;
-  height: 200px;
+  height: 250px;
   border-radius: 5px;
 }
 
+/*
 .title {
   margin: 0px;
   width: 190px;
   height: 30px;
   text-align: center;
 }
+*/
 
+/*
 .title ti {
   color: black;
   font-size: 12px;
   font-weight: bold;
 }
+*/
 
 .status {
   margin: 0px 3px 0px 3px;
@@ -124,12 +128,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  color: rgb(10, 10, 10);
+  /* color: rgb(10, 10, 10); */
+  color: rgb(48, 48, 48);
   text-align: center;
   background: rgb(243, 239, 239);
   font-size: 12px;
   font-weight: bold;  
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .status title_1 {
