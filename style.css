@@ -132,7 +132,6 @@
   /* grid-template-rows: 1fr 1fr; */
   grid-template-rows: 30px    
   grid-gap: 2px white;
-  /* color: rgb(10, 10, 10); */
   color: rgb(48, 48, 48);
   /*text-align: center;*/
   justify-content: center;            /* 중앙정렬 */
