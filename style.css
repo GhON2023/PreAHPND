@@ -93,14 +93,14 @@
 
 .iconDetail {
   position: relative;
-  flex-direction: column;
+  /*flex-direction: column;*/
   bottom: 42px;
   border: 1px solid #ccc;
   border-bottom: 2px solid #ddd;
   float: left;
   background: white;
   width: 200px;
-  height: 220px;
+  height: 300px;
   border-radius: 5px;
 }
 
@@ -125,14 +125,14 @@
   /*margin: 0px 3px 0px 3px;*/
   margin: 5px 5px 5px 5px;
   /* height: 67px; */
-  height: 180px;
+  height: 240px;
   display: grid;
   grid-template-columns: 70px 110px
   /* grid-template-columns: 1fr 1fr; */
   /* grid-template-rows: 1fr 1fr; */
   grid-template-rows: 30px    
   grid-gap: 2px white;
-  color: rgb(48, 48, 48);
+  color: rgb(64, 64, 64);
   text-align: center;
   background: rgb(243, 239, 239);
   font-size: 12px;
@@ -144,7 +144,7 @@
 .status title_1 {
   grid-column: 1;
   grid-row: 1;
-  height: 30px;
+  height: 40px;
   width: 70px;
   /* margin-top: 3px; */
   /* transform: translate(-50%, -50%); */
@@ -155,54 +155,54 @@
 .status title_2 {
   grid-column: 1;
   grid-row: 2;
-  height: 30px;
+  height: 40px;
   width: 70px;
-  margin-top: 2px;
+  /* margin-top: 2px; */
   border: 1px solid white;
 }
 
 .status title_3 {
     grid-column: 1;
     grid-row: 3;
-    height: 30px;
+    height: 40px;
     width: 70px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     border: 1px solid white;
   }
 
 .status title_4 {
     grid-column: 1;
     grid-row: 4;
-    height: 30px;
+    height: 40px;
     width: 70px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     border: 1px solid white;
   }
 
 .status title_5 {
     grid-column: 1;
     grid-row: 5;
-    height: 30px;
+    height: 40px;
     width: 70px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     border: 1px solid white;
   }
 
 .status title_6 {
     grid-column: 1;
     grid-row: 6;
-    height: 30px;
+    height: 40px;
     width: 70px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     border: 1px solid white;
   }
 
 .status title_7 {
     grid-column: 1;
     grid-row: 7;
-    height: 30px;
+    height: 40px;
     width: 70px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     border: 1px solid white;
   }
 
@@ -222,10 +222,10 @@
   color: rgb(66, 64, 64);
   font-weight: normal;
   font-size: 12px;  
-  height: 30px;
+  height: 40px;
   width: 110px;
   /* transform: translate(-50%, -50%); */
-  transform: translateY(50%);
+  /* transform: translateY(50%); */
   /* margin-top: 3px; */
   border: 1px solid white;
 }
@@ -236,9 +236,9 @@
   color: rgb(66, 64, 64);
   font-weight: normal;
   font-size: 12px;
-  height: 30px;
+  height: 40px;
   width: 110px;
-  margin-top: 3px;
+  /* margin-top: 3px; */
   border: 1px solid white;
 }
 
@@ -248,9 +248,9 @@
     color: rgb(66, 64, 64);
     font-weight: normal;
     font-size: 12px;
-    height: 30px;
+    height: 40px;
     width: 110px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     border: 1px solid white;
   }
 
@@ -260,9 +260,9 @@
     color: rgb(66, 64, 64);
     font-weight: normal;
     font-size: 12px;
-    height: 30px;
+    height: 40px;
     width: 110px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     border: 1px solid white;
   }
 
@@ -272,9 +272,9 @@
     color: rgb(66, 64, 64);
     font-weight: normal;     
     font-size: 12px;
-    height: 30px;
+    height: 40px;
     width: 110px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     border: 1px solid white;
   }
 
@@ -284,9 +284,9 @@
     color: rgb(66, 64, 64);
     font-weight: normal;
     font-size: 12px;
-    height: 30px;
+    height: 40px;
     width: 110px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     border: 1px solid white;
   }
 
@@ -296,9 +296,9 @@
     color: rgb(66, 64, 64);
     font-weight: normal;
     font-size: 12px;
-    height: 30px;
+    height: 40px;
     width: 110px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     border: 1px solid white;
   }
 
