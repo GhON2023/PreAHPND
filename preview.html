@@ -361,7 +361,8 @@
 		// 마커에 클릭이벤트를 등록한다.
 		kakao.maps.event.addListener(marker2, 'click', function() {
                    // 마커 위에 인포윈도우를 표시합니다
-                   //infowindow.open(map, marker);  		 
+                   //infowindow.open(map, marker); 
+		   customOverlay.setMap(null);
 		   customOverlay.setMap(map);
                 });
 
