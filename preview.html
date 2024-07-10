@@ -242,7 +242,7 @@
 		    map: map // 마커를 표시할 지도 객체
 		});
 
-		var marker = new kakao.maps.Marker({
+		var marker2 = new kakao.maps.Marker({
 		    position: new kakao.maps.LatLng(35.3467973, 129.3249957), // 마커의 좌표 25  울산광역시 울주군 서생면 신암리 291-54
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
@@ -259,7 +259,7 @@
 		// 마커를 생성한다 (표시될 위치를 객체 형태로 삽입) - 2
 		//var marker = new kakao.maps.Marker({
 		//    position: markerPosition
-		//});
+		//});		
 		
 		// 마커가 지도 위에 표시되도록 설정한다
 		function setCenter(lat, lng)
@@ -341,8 +341,16 @@
 		    //position: marker.getPosition(),
                 });
 
+		// 마커에 클릭이벤트를 등록한다.
+		kakao.maps.event.addListener(marker2, 'click', function() {
+                   // 마커 위에 인포윈도우를 표시합니다
+                   //infowindow.open(map, marker);  
+		   console.log("")
+		   customOverlay.setMap(map);
+                });
+
                 // 커스텀 오버레이를 지도에 표시하니다.
-		customOverlay.setMap(map);
+		//customOverlay.setMap(map);
 		
 		// 아래 코드는 지도 위의 마커를 제거하는 코드입니다.
 		// marker.seteMap(null);
