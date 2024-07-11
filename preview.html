@@ -613,6 +613,17 @@
 		    //position: marker.getPosition(),
                 });
 
+		//마커에 클릭 이벤트 등록
+
+		var clickHandler = function() {
+		   customOverlay.setMap(null);
+		   customOverlay.setMap(map);
+		}
+		
+		for (var i = 0; i < blueMarkers.length; i++) {
+		   kakao.maps.event.addListener(blueMarkers[i], 'click', clickHandler {	
+		}			
+		
 		// 마커에 클릭이벤트를 등록한다.
 		//kakao.maps.event.addListener(marker2, 'click', function() {
                    // 마커 위에 인포윈도우를 표시합니다
