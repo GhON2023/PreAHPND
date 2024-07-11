@@ -380,6 +380,265 @@
     border-left: 2px solid white;
   }
 
+.user-wrap{
+  width: 100%;
+  margin: 10px auto;
+  position: relative;  
+}
+
+.blue-image{
+  width:100px;
+  height: 38px;
+  position: fixed;
+  top: 50px;
+  left: 39%;
+  background-image: url("./Chk_blue_100x36.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  /* vertical-align: middle; */
+}
+
+.blue-selected{
+  width:100px;
+  height: 38px;
+  position: fixed;
+  top: 50px;
+  left: 39%;
+  background-image: url("./UnChk_blue_100x36.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.blue-text{
+  position: absolute;
+  top: 69px;
+  left: 40.4%;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(38,101,239);
+  text-align: center;
+  user-select: none;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.blue-text2{
+  position: absolute;
+  top: 68px;
+  left: 42.6%;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.user-wrap2{
+  width: 100%;
+  margin: 10px auto;
+  position: relative;  
+}
+
+.brown-image{
+  width:100px;
+  height: 38px;
+  position: fixed;
+  top: 50px;
+  left: 45%;
+  background-image: url("./Chk_brown_100x36.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  /* vertical-align: middle; */
+}
+
+.brown-selected{
+  width:100px;
+  height: 38px;
+  position: fixed;
+  top: 50px;
+  left: 45%;
+  background-image: url("./UnChk_brown_100x36.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.brown-text{
+  position: absolute;
+  top: 69px;
+  left: 46.4%;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(211,181,31);
+  text-align: center;
+  user-select: none;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.brown-text2{
+  position: absolute;
+  top: 68px;
+  left: 48.6%;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  user-select: none;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.user-wrap3{
+  width: 100%;
+  margin: 10px auto;
+  position: relative;  
+}
+
+.orange-image{
+  width:100px;
+  height: 38px;
+  position: fixed;
+  top: 50px;
+  left: 51%;
+  background-image: url("./Chk_orange_100x36.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  /* vertical-align: middle; */
+}
+
+.orange-selected{
+  width:100px;
+  height: 38px;
+  position: fixed;
+  top: 50px;
+  left: 51%;
+  background-image: url("./UnChk_orange_100x36.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.orange-text{
+  position: absolute;
+  top: 69px;
+  left: 52.4%;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(253,106,15);
+  text-align: center;
+  user-select: none;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.orange-text2{
+  position: absolute;
+  top: 68px;
+  left: 54.6%;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  user-select: none;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.user-wrap4{
+  width: 100%;
+  margin: 10px auto;
+  position: relative;  
+}
+
+.red-image{
+  width:100px;
+  height: 38px;
+  position: fixed;
+  top: 50px;
+  left: 57%;
+  background-image: url("./Chk_red_100x36.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  /* vertical-align: middle; */
+}
+
+.red-selected{
+  width:100px;
+  height: 38px;
+  position: fixed;
+  top: 50px;
+  left: 57%;
+  background-image: url("./UnChk_red_100x36.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.red-text{
+  position: absolute;
+  top: 69px;
+  left: 58.4%;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(253,0,23);
+  text-align: center;
+  user-select: none;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.red-text2{
+  position: absolute;
+  top: 68px;
+  left: 60.6%;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  user-select: none;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+}
 
 /*.iconDetail:after {
   content: ‘’;
