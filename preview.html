@@ -623,7 +623,53 @@
 		   customOverlay.setMap(null);
 		   customOverlay.setMap(map);
 		}*/
-		
+
+		var position = new kakao.maps.LatLng(blueMarkers[0].getPosition().getLat(), blueMarkers[0].getPosition().getLng());
+		var customOverlay = new kakao.maps.CustomOverlay({
+                             position: position,
+		             content: result,
+		             //xAnchor: 0.3,
+		             //yAnchor: 0.91
+		             yAnchor: 1
+                });
+
+		kakao.maps.event.addListener(blueMarkers[0], 'click', function() {
+		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
+		       customOverlay.setMap(null);
+		       customOverlay.setMap(map);
+		});
+
+		var position = new kakao.maps.LatLng(blueMarkers[1].getPosition().getLat(), blueMarkers[1].getPosition().getLng());
+		var customOverlay = new kakao.maps.CustomOverlay({
+                             position: position,
+		             content: result,
+		             //xAnchor: 0.3,
+		             //yAnchor: 0.91
+		             yAnchor: 1
+                });
+
+		kakao.maps.event.addListener(blueMarkers[1], 'click', function() {
+		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
+		       customOverlay.setMap(null);
+		       customOverlay.setMap(map);
+		});
+
+		var position = new kakao.maps.LatLng(blueMarkers[2].getPosition().getLat(), blueMarkers[2].getPosition().getLng());
+		var customOverlay = new kakao.maps.CustomOverlay({
+                             position: position,
+		             content: result,
+		             //xAnchor: 0.3,
+		             //yAnchor: 0.91
+		             yAnchor: 1
+                });
+
+		kakao.maps.event.addListener(blueMarkers[2], 'click', function() {
+		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
+		       customOverlay.setMap(null);
+		       customOverlay.setMap(map);
+		});	
+
+		/*
 		for (var i = 0; i < blueMarkers.length; i++) {
 		   //kakao.maps.event.addListener(blueMarkers[i], 'click', clickHandler);
 
@@ -641,7 +687,7 @@
 		       customOverlay.setMap(null);
 		       customOverlay.setMap(map);
 		   });			
-		}			
+		}	*/		
 		
 		// 마커에 클릭이벤트를 등록한다.
 		//kakao.maps.event.addListener(marker2, 'click', function() {
