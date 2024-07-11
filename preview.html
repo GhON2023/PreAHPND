@@ -624,9 +624,9 @@
 		   customOverlay.setMap(map);
 		}*/
 
-		var position = new kakao.maps.LatLng(blueMarkers[0].getPosition().getLat(), blueMarkers[0].getPosition().getLng());
-		var customOverlay = new kakao.maps.CustomOverlay({
-                             position: position,
+		var position1 = new kakao.maps.LatLng(blueMarkers[0].getPosition().getLat(), blueMarkers[0].getPosition().getLng());
+		var customOverlay1 = new kakao.maps.CustomOverlay({
+                             position: position1,
 		             content: result,
 		             //xAnchor: 0.3,
 		             //yAnchor: 0.91
@@ -635,13 +635,13 @@
 
 		kakao.maps.event.addListener(blueMarkers[0], 'click', function() {
 		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
-		       customOverlay.setMap(null);
-		       customOverlay.setMap(map);
+		       customOverlay1.setMap(null);
+		       customOverlay1.setMap(map);
 		});
 
-		var position = new kakao.maps.LatLng(blueMarkers[1].getPosition().getLat(), blueMarkers[1].getPosition().getLng());
-		var customOverlay = new kakao.maps.CustomOverlay({
-                             position: position,
+		var position2 = new kakao.maps.LatLng(blueMarkers[1].getPosition().getLat(), blueMarkers[1].getPosition().getLng());
+		var customOverlay2 = new kakao.maps.CustomOverlay({
+                             position: position2,
 		             content: result,
 		             //xAnchor: 0.3,
 		             //yAnchor: 0.91
@@ -650,13 +650,13 @@
 
 		kakao.maps.event.addListener(blueMarkers[1], 'click', function() {
 		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
-		       customOverlay.setMap(null);
-		       customOverlay.setMap(map);
+		       customOverlay2.setMap(null);
+		       customOverlay2.setMap(map);
 		});
 
-		var position = new kakao.maps.LatLng(blueMarkers[2].getPosition().getLat(), blueMarkers[2].getPosition().getLng());
-		var customOverlay = new kakao.maps.CustomOverlay({
-                             position: position,
+		var position3 = new kakao.maps.LatLng(blueMarkers[2].getPosition().getLat(), blueMarkers[2].getPosition().getLng());
+		var customOverlay3 = new kakao.maps.CustomOverlay({
+                             position: position3,
 		             content: result,
 		             //xAnchor: 0.3,
 		             //yAnchor: 0.91
@@ -665,8 +665,8 @@
 
 		kakao.maps.event.addListener(blueMarkers[2], 'click', function() {
 		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
-		       customOverlay.setMap(null);
-		       customOverlay.setMap(map);
+		       customOverlay3.setMap(null);
+		       customOverlay3.setMap(map);
 		});	
 
 		/*
