@@ -628,7 +628,8 @@
 		   //kakao.maps.event.addListener(blueMarkers[i], 'click', clickHandler);
 		   kakao.maps.event.addListener(blueMarkers[i], 'click', function() {
 			   
-		      var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
+		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
+		      var position = new kakao.maps.LatLng(blueMarkers[i].getPosition().getLat(), blueMarkers.getPosition().getLng());
 		      var customOverlay = new kakao.maps.CustomOverlay({
                              position: position,
 		             content: result,
