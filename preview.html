@@ -626,18 +626,18 @@
 		
 		for (var i = 0; i < blueMarkers.length; i++) {
 		   //kakao.maps.event.addListener(blueMarkers[i], 'click', clickHandler);
-		   kakao.maps.event.addListener(blueMarkers[i], 'click', function() {
-			   
-		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
-		      var position = new kakao.maps.LatLng(blueMarkers[i].getPosition().getLat(), blueMarkers.getPosition().getLng());
-		      var customOverlay = new kakao.maps.CustomOverlay({
+
+		   var position = new kakao.maps.LatLng(blueMarkers[i].getPosition().getLat(), blueMarkers[i].getPosition().getLng());
+		   var customOverlay = new kakao.maps.CustomOverlay({
                              position: position,
 		             content: result,
 		             //xAnchor: 0.3,
 		             //yAnchor: 0.91
 		             yAnchor: 1
-                       });
-
+                   });
+			
+		   kakao.maps.event.addListener(blueMarkers[i], 'click', function() {			   
+		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
 		       customOverlay.setMap(null);
 		       customOverlay.setMap(map);
 		   });			
