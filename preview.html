@@ -465,14 +465,13 @@
                       if (n1 == 1) {
                          blue.className = 'blue-selected';
                          //brown.className = 'brown-image';
-
-			 setBlueMarkers(map);
+			 setBlueMarkers(null); 
                          n1 = 0;
                       } else if (n1 == 0) {
                          // UnChecked 상태
                          blue.className = "blue-image";
-                         //brown.className = '';
-			 setBlueMarkers(null); 
+                         //brown.className = '';			 
+			 setBlueMarkers(map);
                          n1 = 1;
                    }
                    } else if (type == 'brown') 
@@ -481,13 +480,13 @@
                       if (n2 == 1) {
                          //blue.className = '';
                          brown.className = 'brown-selected';
-			 setBrownMarkers(map);
+			 setBrownMarkers(null);
                          n2 = 0;
                       } else if (n2 == 0) {
                          // UnChecked 상태
                          //blue.className = '';
                          brown.className = "brown-image";
-			 setBrownMarkers(null);
+			 setBrownMarkers(map);
                          n2 = 1;
                       }
                    } else if (type == 'orange') 
@@ -496,13 +495,13 @@
                       if (n3 == 1) {
                          //blue.className = '';
                          orange.className = 'orange-selected';
-			 setOrangeMarkers(map);
+			 setOrangeMarkers(null);
                          n3 = 0;
                       } else if (n3 == 0) {
                          // UnChecked 상태
                          //blue.className = '';
                          orange.className = "orange-image";
-			 setOrangeMarkers(null);
+			 setOrangeMarkers(map);
                          n3 = 1;
                       }
                     } else if (type == 'red') 
@@ -511,13 +510,13 @@
                        if (n4 == 1) {
                           //blue.className = '';
                           red.className = 'red-selected';
-			  setRedMarkers(map);
+			  setRedMarkers(null);
                           n4 = 0;
                        } else if (n4 == 0) {
                           // UnChecked 상태
                           //blue.className = '';
                           red.className = "red-image";
-			  setRedMarkers(null);
+			  setRedMarkers(map);
                           n4 = 1;
                         }
                     }             
