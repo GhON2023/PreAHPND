@@ -186,10 +186,14 @@
 		var redMarkers = [];
 
 		CreateBlueMarkers();   // 관심 마커를 생성하고 관심 마커 배열에 추가
-		//CreateBrownMarkers();  // 주의 마커를 생성하고 주의 마커 배열에 추가
-		//CreateOrangeMarkers();  // 경계 마커를 생성하고 경계 마커 배열에 추가
-		//CreateRedMarkers();     // 위험 마커를 생성하고 위험 마커 배열에 추가
-		
+		CreateBrownMarkers();  // 주의 마커를 생성하고 주의 마커 배열에 추가
+		CreateOrangeMarkers();  // 경계 마커를 생성하고 경계 마커 배열에 추가
+		CreateRedMarkers();     // 위험 마커를 생성하고 위험 마커 배열에 추가
+
+		setBlueMarkers(map);    // 관심(Blue) 마커 지도 표시  
+		setBrownMarkers(map):   // 주의(Brown) 마커 지도 표시  
+		setOrangeMarkers(map);  // 경계(Orange) 마커 지도 표시 
+		setRedMarkers(map);     // 위험(Red) 마커 지도 표시 
 		
 
 		// 관심(green): 13    주의(brown): 2    경계(orange): 8      위험(red) : 2
@@ -477,11 +481,13 @@
                       if (n2 == 1) {
                          //blue.className = '';
                          brown.className = 'brown-selected';
+			 setBrownMarkers(map);
                          n2 = 0;
                       } else if (n2 == 0) {
                          // UnChecked 상태
                          //blue.className = '';
                          brown.className = "brown-image";
+			 setBrownMarkers(null);
                          n2 = 1;
                       }
                    } else if (type == 'orange') 
@@ -490,11 +496,13 @@
                       if (n3 == 1) {
                          //blue.className = '';
                          orange.className = 'orange-selected';
+			 setOrangeMarkers(map);
                          n3 = 0;
                       } else if (n3 == 0) {
                          // UnChecked 상태
                          //blue.className = '';
                          orange.className = "orange-image";
+			 setOrangeMarkers(null);
                          n3 = 1;
                       }
                     } else if (type == 'red') 
@@ -503,11 +511,13 @@
                        if (n4 == 1) {
                           //blue.className = '';
                           red.className = 'red-selected';
+			  setRedMarkers(map);
                           n4 = 0;
                        } else if (n4 == 0) {
                           // UnChecked 상태
                           //blue.className = '';
                           red.className = "red-image";
+			  setRedMarkers(null);
                           n4 = 1;
                         }
                     }             
@@ -605,12 +615,12 @@
                 });
 
 		// 마커에 클릭이벤트를 등록한다.
-		kakao.maps.event.addListener(marker2, 'click', function() {
+		//kakao.maps.event.addListener(marker2, 'click', function() {
                    // 마커 위에 인포윈도우를 표시합니다
                    //infowindow.open(map, marker); 
-		   customOverlay.setMap(null);
-		   customOverlay.setMap(map);
-                });
+		//   customOverlay.setMap(null);
+		//   customOverlay.setMap(map);
+                //});
 
                 // 커스텀 오버레이를 지도에 표시하니다.
 		//customOverlay.setMap(map);
