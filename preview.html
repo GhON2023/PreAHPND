@@ -155,8 +155,8 @@
 		];
 
 		console.log(markerBluePositions[0]);
-		console.log(markerBluePositions[0].GetLat());
-		console.log(markerBluePositions[0].GetLng());
+		console.log(markerBluePositions[0].Ma);
+		console.log(markerBluePositions[0].La);
 
 		// 주의 (Brown) 2개 마커가 표시될 좌표 배열
 		var markerBrownPositions = [
@@ -628,7 +628,7 @@
 		   //kakao.maps.event.addListener(blueMarkers[i], 'click', clickHandler);
 		   kakao.maps.event.addListener(blueMarkers[i], 'click', function() {
 			   
-		      var position = new kakao.maps.LatLng(markerBluePositions[i].getLat(), markerBluePositions[i].getLng());
+		      var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
 		      var customOverlay = new kakao.maps.CustomOverlay({
                              position: position,
 		             content: result,
