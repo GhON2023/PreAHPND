@@ -135,159 +135,215 @@
 		var markerImageGreen = new kakao.maps.MarkerImage(markerImageUrl2, markerImageSize2, markerImageOptions2);
 		var markerImageBrown = new kakao.maps.MarkerImage(markerImageUrl3, markerImageSize3, markerImageOptions3);
 		var markerImageOrange = new kakao.maps.MarkerImage(markerImageUrl4, markerImageSize4, markerImageOptions4);
+
+
+		// 관심(Blue) 13개 마커가 표시될 좌표 배열
+		var markerBluePositions = [
+			new kakao.maps.LatLng(34.6021133, 127.7402856),
+			new kakao.maps.LatLng(36.8519968, 126.8513189),
+			new kakao.maps.LatLng(36.9617854, 126.333786),
+			new kakao.maps.LatLng(36.8272498, 126.3270157),
+			new kakao.maps.LatLng(36.589336, 126.3148374),
+			new kakao.maps.LatLng(36.5991061, 126.3831177),
+			new kakao.maps.LatLng(36.0548241, 126.6319321),
+			new kakao.maps.LatLng(35.5725956, 126.6352721),
+			new kakao.maps.LatLng(35.5312691, 126.5143343),
+			new kakao.maps.LatLng(37.5933287, 126.4395052),
+			new kakao.maps.LatLng(37.7011337, 126.3798797),
+			new kakao.maps.LatLng(34.9417083, 128.2194369),
+			new kakao.maps.LatLng(35.3467973, 129.3249957)
+		];
+
+		// 주의 (Brown) 2개 마커가 표시될 좌표 배열
+		var markerBrownPositions = [
+			new kakao.maps.LatLng(34.7940935, 126.1712666),
+			new kakao.maps.LatLng(34.7001934, 126.1678169)
+			
+		];
+
+		// 경계 (Orange) 8개 마커가 표시될 좌표 배열
+		var markerOrangePositions = [
+			new kakao.maps.LatLng(34.9949089, 126.3342369),
+			new kakao.maps.LatLng(35.0853164,  126.3903314),
+			new kakao.maps.LatLng(34.8772474, 126.1084462),
+			new kakao.maps.LatLng(34.9203515, 126.3052525),
+			new kakao.maps.LatLng(34.918075, 126.0892764),
+			new kakao.maps.LatLng(34.9968078, 126.1813083),
+			new kakao.maps.LatLng(35.0319162, 126.1493091),
+			new kakao.maps.LatLng(35.1699107, 126.3597618)
+		];
+
+		// 위험 (Red) 2개 마커가 표시될 좌료 배열
+		var markerRedPositions = [
+			new kakao.maps.LatLng(34.3047101, 126.678933),
+			new kakao.maps.LatLng(34.426068, 126.4826311)
+		];
+
+		
+		var blueMarkers = [];
+		var brownMarkers = [];
+		var orangeMarkers = [];
+		var redMarkers = [];
+
+		CreateBlueMarkers();   // 관심 마커를 생성하고 관심 마커 배열에 추가
+		CreateBrownMarkers();  // 주의 마커를 생성하고 주의 마커 배열에 추가
+		CreateOrangeMarkers();  // 경계 마커를 생성하고 경계 마커 배열에 추가
+		CreateRedMarkers();     // 위험 마커를 생성하고 위험 마커 배열에 추가
+		
 		
 
-		// 관심(green): 13    주의(brown): 2    경고(orange): 8      위험(red) : 2
+		// 관심(green): 13    주의(brown): 2    경계(orange): 8      위험(red) : 2
 		// 지도에 마커를 생성하고 표시한다		
-		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌표 1  전남 무안군 망운면 송현리 1070-5
-		    image : markerImageOrange,    // 마커를 표시할 지도 객체
-		    map: map // 마커를 표시할 지도 객체
-		});
+		//var marker = new kakao.maps.Marker({
+		//    position: new kakao.maps.LatLng(34.9949089, 126.3342369), // 마커의 좌표 1  전남 무안군 망운면 송현리 1070-5   경계-1
+		//    image : markerImageOrange,    // 마커를 표시할 지도 객체
+		//    map: map // 마커를 표시할 지도 객체
+		//});
 
-		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.0853164,  126.3903314), // 마커의 좌표 2  전남 무안군 현경면 용정리 6-3
-		    image : markerImageOrange,    // 마커를 표시할 지도 객체
-		    map: map // 마커를 표시할 지도 객체
-		});		
+		//var marker = new kakao.maps.Marker({
+		//    position: new kakao.maps.LatLng(35.0853164,  126.3903314), // 마커의 좌표 2  전남 무안군 현경면 용정리 6-3   경계-2
+		//    image : markerImageOrange,    // 마커를 표시할 지도 객체
+		//    map: map // 마커를 표시할 지도 객체
+		//});		
 
-		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.8772474, 126.1084462), // 마커의 좌표 3  전남 신안군 암태면 신석리 2571-7
-		    image : markerImageOrange,    // 마커를 표시할 지도 객체
-		    map: map // 마커를 표시할 지도 객체
-		});		
+		//var marker = new kakao.maps.Marker({
+		//    position: new kakao.maps.LatLng(34.8772474, 126.1084462), // 마커의 좌표 3  전남 신안군 암태면 신석리 2571-7   경계-3
+		//    image : markerImageOrange,    // 마커를 표시할 지도 객체
+		//    map: map // 마커를 표시할 지도 객체
+		//});		
 
+		//var marker = new kakao.maps.Marker({
+		//    position: new kakao.maps.LatLng(34.9203515, 126.3052525), // 마커의 좌표 4  전남 신안군 압해읍 가룡리 134-24   경계-4
+		//    image : markerImageOrange,    // 마커를 표시할 지도 객체
+		//    map: map // 마커를 표시할 지도 객체
+		//});		
+                /*
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.9203515, 126.3052525), // 마커의 좌표 4  전남 신안군 압해읍 가룡리 134-24 
-		    image : markerImageOrange,    // 마커를 표시할 지도 객체
-		    map: map // 마커를 표시할 지도 객체
-		});		
-
-		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.918075, 126.0892764), // 마커의 좌표 5  전남 신안군 자은면 한운리 1-6
-		    image : markerImageOrange,    // 마커를 표시할 지도 객체
-		    map: map // 마커를 표시할 지도 객체
-		});		
-
-		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.9968078, 126.1813083), // 마커의 좌표 6  전남 신안군 증도면 대초리 1648-10
+		    position: new kakao.maps.LatLng(34.918075, 126.0892764), // 마커의 좌표 5  전남 신안군 자은면 한운리 1-6     경계-5
 		    image : markerImageOrange,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.0319162, 126.1493091), // 마커의 좌표 7  전남 신안군 지도읍 당촌길 181-118
+		    position: new kakao.maps.LatLng(34.9968078, 126.1813083), // 마커의 좌표 6  전남 신안군 증도면 대초리 1648-10   경계-6
 		    image : markerImageOrange,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.7940935, 126.1712666), // 마커의 좌표 8  전남 신안군 팔금면 당고리 20-1			
+		    position: new kakao.maps.LatLng(35.0319162, 126.1493091), // 마커의 좌표 7  전남 신안군 지도읍 당촌길 181-118   경계-7
+		    image : markerImageOrange,    // 마커를 표시할 지도 객체
+		    map: map // 마커를 표시할 지도 객체
+		});		
+
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(34.7940935, 126.1712666), // 마커의 좌표 8  전남 신안군 팔금면 당고리 20-1    주의-1
 		    image : markerImageBrown,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.7001934, 126.1678169), // 마커의 좌표 9  전남 신안군 안좌면 복호리 73-18
+		    position: new kakao.maps.LatLng(34.7001934, 126.1678169), // 마커의 좌표 9  전남 신안군 안좌면 복호리 73-18    주의-2
 		    image : markerImageBrown,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});		
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.6021133, 127.7402856), // 마커의 좌표 10  전남 여수시 돌산읍 신복리 1111-19
+		    position: new kakao.maps.LatLng(34.6021133, 127.7402856), // 마커의 좌표 10  전남 여수시 돌산읍 신복리 1111-19    관심-1
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.1699107, 126.3597618), // 마커의 좌표 11  전남 영광군 염산면 향화로 1
+		    position: new kakao.maps.LatLng(35.1699107, 126.3597618), // 마커의 좌표 11  전남 영광군 염산면 향화로 1     경계-8
 		    image : markerImageOrange,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.3047101, 126.678933), // 마커의 좌표 12  전남 완도군 완도읍 정도리 830-12
+		    position: new kakao.maps.LatLng(34.3047101, 126.678933), // 마커의 좌표 12  전남 완도군 완도읍 정도리 830-12     위험-1
 		    image : markerImageRed,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.426068, 126.4826311), // 마커의 좌표 13  전남 해남군 화산면 평호리 395-39
+		    position: new kakao.maps.LatLng(34.426068, 126.4826311), // 마커의 좌표 13  전남 해남군 화산면 평호리 395-39    위험-2
 		    image : markerImageRed,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.8519968, 126.8513189), // 마커의 좌표 14  충남 아산시 인주면 대음리 277-3
+		    position: new kakao.maps.LatLng(36.8519968, 126.8513189), // 마커의 좌표 14  충남 아산시 인주면 대음리 277-3	  관심-2
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.9617854, 126.333786), // 마커의 좌표 15  충남 서산시 대산읍 오지리 338-45
+		    position: new kakao.maps.LatLng(36.9617854, 126.333786), // 마커의 좌표 15  충남 서산시 대산읍 오지리 338-45    관심-3
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.8272498, 126.3270157), // 마커의 좌표 16  충남 서산시 팔봉면 호리 621-3
+		    position: new kakao.maps.LatLng(36.8272498, 126.3270157), // 마커의 좌표 16  충남 서산시 팔봉면 호리 621-3   관심-4
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.589336, 126.3148374), // 마커의 좌표 17  충남 태안군 남면 신온리 드르니항
+		    position: new kakao.maps.LatLng(36.589336, 126.3148374), // 마커의 좌표 17  충남 태안군 남면 신온리 드르니항   관심-5
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.5991061, 126.3831177), // 마커의 좌표 18  충남 태안군 안면읍 황도리 26-4
+		    position: new kakao.maps.LatLng(36.5991061, 126.3831177), // 마커의 좌표 18  충남 태안군 안면읍 황도리 26-4   관심-6
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(36.0548241, 126.6319321), // 마커의 좌표 19  충남 서천군 마서면 죽산리산 4-22
+		    position: new kakao.maps.LatLng(36.0548241, 126.6319321), // 마커의 좌표 19  충남 서천군 마서면 죽산리산 4-22   관심-7
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.5725956, 126.6352721), // 마커의 좌표 20  전북 고창군 부안면 상암리 446
+		    position: new kakao.maps.LatLng(35.5725956, 126.6352721), // 마커의 좌표 20  전북 고창군 부안면 상암리 446   관심-8
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.5312691, 126.5143343), // 마커의 좌표 21  전북 고창군 심원면 만돌리 735-1
+		    position: new kakao.maps.LatLng(35.5312691, 126.5143343), // 마커의 좌표 21  전북 고창군 심원면 만돌리 735-1   관심-9
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(37.5933287, 126.4395052), // 마커의 좌표 22  인천 강화군 화도면 동막리 산 126-2
+		    position: new kakao.maps.LatLng(37.5933287, 126.4395052), // 마커의 좌표 22  인천 강화군 화도면 동막리 산 126-2   관심-10
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(37.7011337, 126.3798797), // 마커의 좌표 23  인천 강화군 내가면 해안서로 889
+		    position: new kakao.maps.LatLng(37.7011337, 126.3798797), // 마커의 좌표 23  인천 강화군 내가면 해안서로 889  관심-11
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(34.9417083, 128.2194369), // 마커의 좌표 24  경남 고성군 하일면 용태리 335-3
+		    position: new kakao.maps.LatLng(34.9417083, 128.2194369), // 마커의 좌표 24  경남 고성군 하일면 용태리 335-3   관심-12
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
 
 		var marker2 = new kakao.maps.Marker({
-		    position: new kakao.maps.LatLng(35.3467973, 129.3249957), // 마커의 좌표 25  울산광역시 울주군 서생면 신암리 291-54
+		    position: new kakao.maps.LatLng(35.3467973, 129.3249957), // 마커의 좌표 25  울산광역시 울주군 서생면 신암리 291-54   관심-13
 		    image : markerImageGreen,    // 마커를 표시할 지도 객체
 		    map: map // 마커를 표시할 지도 객체
 		});
+                */
 		
 		//var marker = new kakao.maps.LatLng(35.0853164, 126.3903314)  // 마커 2
 
@@ -311,6 +367,151 @@
 		   marker = new kakao.maps.Marker({ position: mp});    // 새로 만들어줘야 새로 그려진다.
 		   marker.setMap(map);   // 마커 그림
 		}
+
+		function CreateBlueMarkers() 
+		{
+		   for (var i = 0; i < markerBluePositions.length; i++) {
+		      var marker = new kakao.maps.Marker({
+		         position: markerBluePositions[i],
+			 image : markerImageGreen});
+
+		       blueMarkers.push(marker);
+	            }	    
+		};
+
+		/*
+		function CreateBrownMarkers() 
+		{
+		   for (var i = 0; i < markerBrownPositions.length; i++) {
+		      var marker = new kakao.maps.Marker({
+		         position: markerBrownPositions[i],
+			 image : markerImageBrown});
+
+		       brownMarkers.push(marker);
+	            }	    
+		};
+   	        */
+                /*
+		function CreateOrangeMarkers() 
+		{
+		   for (var i = 0; i < markerOrangePositions.length; i++) {
+		      var marker = new kakao.maps.Marker({
+		         position: markerOrangePositions[i],
+			 image : markerImageOrange});
+
+		       orangeMarkers.push(marker);
+	            }	    
+		};
+                */
+
+		/*
+		function CreateRedMarkers() 
+		{
+		   for (var i = 0; i < markerRedPositions.length; i++) {
+		      var marker = new kakao.maps.Marker({
+		         position: markerRedPositions[i],
+			 image : markerImageRed});
+
+		       redMarkers.push(marker);
+	            }	    
+		};
+                */
+
+		// 관심(Blue) 마커들의 지도 표시 여부를 설정하는 함수
+		function setBlueMarkers(map) {
+			for (var i = 0; i < blueMarkers.length; i++) {
+			   blueMarkers[i].setMap(map);
+			}
+		}
+
+		// 주의(Brown) 마커들의 지도 표시 여부를 설정하는 함수
+		function setBrownMarkers(map) {
+			for (var i = 0; i < brownMarkers.length; i++) {
+			   brownMarkers[i].setMap(map);
+			}
+		}
+
+		// 경계(Orange) 마커들의 지도 표시 여부를 설정하는 함수
+		function setOrangeMarkers(map) {
+			for (var i = 0; i < orangeMarkers.length; i++) {
+			   orangeMarkers[i].setMap(map);
+			}
+		}
+
+		// 위험(Red) 마커들의 지도 표시 여부를 설정하는 함수
+		function setRedMarkers(map) {
+			for (var i = 0; i < redMarkers.length; i++) {
+			   redMarkers[i].setMap(map);
+			}
+		}
+
+		var n1 = 1;
+                var n2 = 1;
+                var n3 = 1;
+                var n4 = 1;
+
+                function divBtn(type) {
+                   var blue = document.getElementById("blue-image");
+                   var brown = document.getElementById("brown-image");
+                   var orange = document.getElementById("orange-image");
+                   var red = document.getElementById("red-image");
+
+                   if (type == 'blue') {
+                      // Checked 상태
+                      if (n1 == 1) {
+                         blue.className = 'blue-selected';
+                         //brown.className = 'brown-image';
+
+			 setBlueMarkers(map);
+                         n1 = 0;
+                      } else if (n1 == 0) {
+                         // UnChecked 상태
+                         blue.className = "blue-image";
+                         //brown.className = '';
+			 setBlueMarkers(null); 
+                         n1 = 1;
+                   }
+                   } else if (type == 'brown') 
+                   {
+                      // Checked 상태
+                      if (n2 == 1) {
+                         //blue.className = '';
+                         brown.className = 'brown-selected';
+                         n2 = 0;
+                      } else if (n2 == 0) {
+                         // UnChecked 상태
+                         //blue.className = '';
+                         brown.className = "brown-image";
+                         n2 = 1;
+                      }
+                   } else if (type == 'orange') 
+                   {
+                      // Checked 상태
+                      if (n3 == 1) {
+                         //blue.className = '';
+                         orange.className = 'orange-selected';
+                         n3 = 0;
+                      } else if (n3 == 0) {
+                         // UnChecked 상태
+                         //blue.className = '';
+                         orange.className = "orange-image";
+                         n3 = 1;
+                      }
+                    } else if (type == 'red') 
+                    {
+                       // Checked 상태
+                       if (n4 == 1) {
+                          //blue.className = '';
+                          red.className = 'red-selected';
+                          n4 = 0;
+                       } else if (n4 == 0) {
+                          // UnChecked 상태
+                          //blue.className = '';
+                          red.className = "red-image";
+                          n4 = 1;
+                        }
+                    }             
+                 }
 
 		// 커스텀 오버레이에 표시할 내용입니다.
 		//var context = '<div class="grid-container"><div>지역</div><div>전남 해남</div><div>단계</div><div>위험</div><div>예측지수</div><div>88</div><div>수온</div><div>24.6</div><div>염분</div><div>32</div><div>유속(cm/s)</div><div>17</div></div>';
@@ -486,3 +687,4 @@
         }
     }
   }
+</script>
