@@ -532,6 +532,7 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  z-index: 10;
   /* vertical-align: middle; */
 }
 
@@ -546,6 +547,7 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  z-index: 10;
 }
 
 .orange-text{
@@ -560,7 +562,7 @@
   text-align: center;
   user-select: none;
   overflow: hidden;
-  z-index: 0;
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -576,7 +578,7 @@
   text-align: center;
   user-select: none;
   overflow: hidden;
-  z-index: 0;
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -597,6 +599,7 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  z-index: 10;
   /* vertical-align: middle; */
 }
 
@@ -611,6 +614,7 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  z-index: 10;
 }
 
 .red-text{
@@ -625,7 +629,7 @@
   text-align: center;
   user-select: none;
   overflow: hidden;
-  z-index: 0;
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -641,7 +645,7 @@
   text-align: center;
   user-select: none;
   overflow: hidden;
-  z-index: 0;
+  z-index: 10;
   cursor: pointer;
 }
 
