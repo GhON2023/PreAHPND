@@ -636,9 +636,8 @@
 		var customOverlay1 = new kakao.maps.CustomOverlay({
                              position: position1,
 		             content: result,
-		             //xAnchor: 0.3,
-		             //yAnchor: 0.91
-		             yAnchor: 1
+		             xAnchor: 0.5,
+		             yAnchor: 0.5
                 });
 
 		kakao.maps.event.addListener(blueMarkers[0], 'click', function() {
@@ -651,8 +650,7 @@
 		var customOverlay2 = new kakao.maps.CustomOverlay({
                              position: position2,
 		             content: result,
-		             //xAnchor: 0.3,
-		             //yAnchor: 0.91
+		             xAnchor: 0.5,
 		             yAnchor: 1
                 });
 
@@ -666,8 +664,7 @@
 		var customOverlay3 = new kakao.maps.CustomOverlay({
                              position: position3,
 		             content: result,
-		             //xAnchor: 0.3,
-		             //yAnchor: 0.91
+			     xAnchor: 1,
 		             yAnchor: 1
                 });
 
