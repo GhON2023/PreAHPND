@@ -106,6 +106,38 @@
   /* background: url('https://ghon2023.github.io/PreAHPND/box_movie_white.png'); */
 } 
 
+.title {
+  margin-top: 100px;
+  width: 100px;
+  height: 30px;
+  padding-top: 7px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: blue;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.title-1 {
+  position: fixed;
+  margin-top: -36px;
+  margin-left: 105px;
+  width: 100px;
+  height: 30px;
+  padding-top: 7px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: blue;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
 /*
 .title {
   margin: 0px;
