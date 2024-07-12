@@ -578,7 +578,7 @@
 			        '       <value_7>2024.07.10</value_7>' +
                                 '       <value_8>검 출</value_8>' +
 			        '   </div>' +
-                                '   <div class="title">' + 
+                                '   <div class="title" onclick="openChart()">' + 
                                 '       <t1>예측치수 차트</t1>' + 
 			        '   </div>' +
 			        '   <div class="title-1">' + 
@@ -639,6 +639,8 @@
 		kakao.maps.event.addListener(blueMarkers[0], 'click', function() {
 		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
 		       customOverlay1.setMap(null);
+		       customOverlay2.setMap(null);
+		       customOverlay3.setMap(null);
 		       customOverlay1.setMap(map);
 		});
 
@@ -646,13 +648,15 @@
 		var customOverlay2 = new kakao.maps.CustomOverlay({
                              position: position2,
 		             content: result,
-		             xAnchor: 0.6,
-		             yAnchor: 1
+		             xAnchor: 0.5,
+		             yAnchor: 0.5
                 });
 
 		kakao.maps.event.addListener(blueMarkers[1], 'click', function() {
 		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
+		       customOverlay1.setMap(null);
 		       customOverlay2.setMap(null);
+		       customOverlay3.setMap(null);
 		       customOverlay2.setMap(map);
 		});
 
@@ -660,12 +664,14 @@
 		var customOverlay3 = new kakao.maps.CustomOverlay({
                              position: position3,
 		             content: result,
-			     xAnchor: 0.55,
-		             yAnchor: 1.1
+			     xAnchor: 0.5,
+		             yAnchor: 0.5
                 });
 
 		kakao.maps.event.addListener(blueMarkers[2], 'click', function() {
 		      //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
+		       customOverlay1.setMap(null);
+		       customOverlay2.setMap(null);
 		       customOverlay3.setMap(null);
 		       customOverlay3.setMap(map);
 		});	
@@ -703,6 +709,11 @@
 		
 		// 아래 코드는 지도 위의 마커를 제거하는 코드입니다.
 		// marker.seteMap(null);
+
+		function openChart() {
+		   alert("TEST");
+		}
+		
    	   </script>
 	
     </body>
