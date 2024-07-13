@@ -748,6 +748,7 @@
 
 		let body = document.querySelector('body');
   	        let modalBodyEl = document.querySelector(".modal-body");
+		let chartBodyEl = document.querySelector(".modal-chart-body");
 
                 function showModal() {
                    var modal = document.querySelector('.modal');
@@ -784,7 +785,7 @@
                     // modal-body 이외의 영역을 마우스 클릭 시 modal 종료
                     document.addEventListener('mouseup', (e) => {
 
-		       if (!modalBodyEl.contains(e.target)) {
+		       if (!chartBodyEl.contains(e.target)) {
 		          modal.style.display = 'none';
 		          body.style.overflow = 'auto';
 		       }
