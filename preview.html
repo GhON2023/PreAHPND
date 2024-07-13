@@ -25,6 +25,16 @@
 	 </style>  -->
 </head>
 <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="modal-chart">
+        <div class="modal-chart-body">
+          <div>
+            <canvas id="myChart" width="550" height="320"></canvas>
+          </div>
+       </div>
+    </div> 
+	
 	<!-- <div id="map" style="width:1200px;height:800px;"></div> -->
 	<!-- 오버레이 테스트 -->
 	<!-- <div class="grid-container">
@@ -41,6 +51,7 @@
 	   <div>유속(cm/s)</div>
 	   <div>17</div>
 	 </div> -->
+
 
     <div class="modal">
 
@@ -798,6 +809,22 @@
                     body.style.overflow = 'hidden';
 
                  }
+
+		 function openChart() {
+
+                    var modal = document.querySelector('.modal-chart');
+                    modal.style.display = 'block';
+                    body.style.overflow = 'hidden';
+    
+                    // modal-body 이외의 영역을 마우스 클릭 시 modal 종료
+                    document.addEventListener('mouseup', (e) => {
+
+		       if (!modalBodyEl.contains(e.target)) {
+		          modal.style.display = 'none';
+		          body.style.overflow = 'auto';
+		       }
+		    });
+		  }
 		
    	   </script>
 	
