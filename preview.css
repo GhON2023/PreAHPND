@@ -41,7 +41,7 @@
 .blue-image {
     width:100px;
     height: 38px;
-    position: relative;
+    position: fixed;
     top: 50px;
     left: 39%;
     background-image: url("https://ghon2023.github.io/PreAHPND/Chk_blue_100x36.png");
@@ -58,7 +58,7 @@
   .blue-selected {
     width:100px;
     height: 38px;
-    position: relative;
+    position: fixed;
     top: 50px;
     left: 39%;
     background-image: url("https://ghon2023.github.io/PreAHPND/UnChk_blue_100x36.png");
@@ -70,9 +70,9 @@
   }
 
   .blue-text {
-    position: absolute;
-    top: 75px;
-    left: 40.5%;
+    position: fixed;
+    top: 69px;
+    left: 40.4%;
     width: 50px;
     transform: translate(-50%, -50%);
     font-size: 16px;
@@ -86,8 +86,8 @@
   }
 
   .blue-text2 {
-    position: absolute;
-    top: 75px;
+    position: fixed;
+    top: 69px;
     left: 42.6%;
     width: 50px;
     transform: translate(-50%, -50%);
@@ -100,4 +100,72 @@
     z-index: 20;
     cursor: pointer;
   }
+
+.user-wrap2{
+    width: 100%;
+    margin: 10px auto;
+    position: fixed;  
+    z-index: 20;
+  }
+  
+.brown-image{
+    width:100px;
+    height: 38px;
+    position: fixed;
+    top: 50px;
+    left: 45%;
+    background-image: url("https://ghon2023.github.io/PreAHPND/Chk_brown_100x36.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 20;
+    /* vertical-align: middle; */
+}  
+  
+.brown-selected{
+    width:100px;
+    height: 38px;
+    position: fixed;
+    top: 50px;
+    left: 45%;
+    background-image: url("https://ghon2023.github.io/PreAHPND/UnChk_brown_100x36.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 20;
+}
+  
+.brown-text{
+    position: fixed;
+    top: 69px;
+    left: 46.4%;
+    width: 50px;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(211,181,31);
+    text-align: center;
+    user-select: none;
+    overflow: hidden;
+    z-index: 20;
+    cursor: pointer;
+}
+  
+.brown-text2{
+    position: fixed;
+    top: 69px;
+    left: 48.6%;
+    width: 50px;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    user-select: none;
+    overflow: hidden;
+    z-index: 20;
+    cursor: pointer;
+}
 
