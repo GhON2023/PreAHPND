@@ -76,7 +76,7 @@
     };
 
     // 마커 이미지를 생성한다
-	var markerImageRed = new kakao.maps.MarkerImage(markerImageUrl1, markerImageSize1, markerImageOptions1);
+    var markerImageRed = new kakao.maps.MarkerImage(markerImageUrl1, markerImageSize1, markerImageOptions1);
 
     // 지도에 마커를 생성하고 표시한다		
     var marker = new kakao.maps.Marker({
@@ -85,5 +85,9 @@
         map: map // 마커를 표시할 지도 객체
     });
 
+    kakao.maps.event.addListener(marker, 'click', function() {
+       alert("TEST");		    
+    });
 
-  </script>
+
+</script>
