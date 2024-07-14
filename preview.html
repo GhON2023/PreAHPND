@@ -406,6 +406,39 @@
 	customOverlay2.setMap(map);
     });
 
+    var position3 = new kakao.maps.LatLng(blueMarkers[2].getPosition().getLat(), blueMarkers[2].getPosition().getLng());
+    var customOverlay3 = new kakao.maps.CustomOverlay({
+                             position: position3,
+		             content: result,
+			     xAnchor: 0.5,
+		             yAnchor: 0.5
+                });
+
+    kakao.maps.event.addListener(blueMarkers[2], 'click', function() {
+        //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
+	customOverlay1.setMap(null);
+	customOverlay2.setMap(null);
+	customOverlay3.setMap(null);
+	customOverlay3.setMap(map);
+    });
+
+    // 지도에 클릭 이벤트를 등록합니다
+    // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
+    kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
+    
+        // 클릭한 위도, 경도 정보를 가져옵니다 
+        var latlng = mouseEvent.latLng; 
+	console.log(latlng);
+        var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
+        message += '경도는 ' + latlng.getLng() + ' 입니다';
+
+	alert(message);
+    
+        //var resultDiv = document.getElementById('clickLatlng'); 
+        //resultDiv.innerHTML = message;
+    
+    });
+
   
 
     //var position = new kakao.maps.LatLng(35.3467973, 129.3249957);
@@ -440,33 +473,6 @@
 		    
 	});
 
-    var position3 = new kakao.maps.LatLng(blueMarkers[2].getPosition().getLat(), blueMarkers[2].getPosition().getLng());
-    var customOverlay3 = new kakao.maps.CustomOverlay({
-                             position: position3,
-		             content: result,
-			     xAnchor: 0.5,
-		             yAnchor: 0.5
-                });
-
-    kakao.maps.event.addListener(blueMarkers[2], 'click', function() {
-
-	//let iconDetailBodyEl = document.querySelector(".iconDetail");
-	    
-        //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
-	customOverlay1.setMap(null);
-	customOverlay2.setMap(null);
-	customOverlay3.setMap(null);
-	customOverlay3.setMap(map);
-
-	// iconDetail 이외의 영역을 마우스 클릭 시 modal 종료
-        document.addEventListener('mouseup', (e) => {
-            //if (!iconDetailBodyEl.contains(e.target)) {
-	    if (!customOverlay3.contains(e.target)) {
-		alert("오버레이 종료");
-                customOverlay3.setMap(null);
-            }
-
-        });
-    });	
+    	
 	
 </script>
