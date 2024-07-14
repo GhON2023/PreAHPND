@@ -406,26 +406,12 @@
 	customOverlay2.setMap(map);
     });
 
-    var position3 = new kakao.maps.LatLng(blueMarkers[2].getPosition().getLat(), blueMarkers[2].getPosition().getLng());
-    var customOverlay3 = new kakao.maps.CustomOverlay({
-                             position: position3,
-		             content: result,
-			     xAnchor: 0.5,
-		             yAnchor: 0.5
-                });
+  
 
-    kakao.maps.event.addListener(blueMarkers[2], 'click', function() {
-        //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
-	customOverlay1.setMap(null);
-	customOverlay2.setMap(null);
-	customOverlay3.setMap(null);
-	customOverlay3.setMap(map);
-    });	
-
-
-	//var position = new kakao.maps.LatLng(35.3467973, 129.3249957);
+    //var position = new kakao.maps.LatLng(35.3467973, 129.3249957);
     let body = document.querySelector('body');
     let chartBodyEl = document.querySelector(".modal-chart-body");
+    let iconDetailBodyEl = document.querySelector(".iconDetail");
 
     kakao.maps.event.addListener(blueMarkers[12], 'click', function() {
 
@@ -447,5 +433,30 @@
 		    
 	});
 
+    var position3 = new kakao.maps.LatLng(blueMarkers[2].getPosition().getLat(), blueMarkers[2].getPosition().getLng());
+    var customOverlay3 = new kakao.maps.CustomOverlay({
+                             position: position3,
+		             content: result,
+			     xAnchor: 0.5,
+		             yAnchor: 0.5
+                });
 
+    kakao.maps.event.addListener(blueMarkers[2], 'click', function() {
+        //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
+	customOverlay1.setMap(null);
+	customOverlay2.setMap(null);
+	customOverlay3.setMap(null);
+	customOverlay3.setMap(map);
+
+	// iconDetail 이외의 영역을 마우스 클릭 시 modal 종료
+        document.addEventListener('mouseup', (e) => {
+
+            if (!iconDetailBodyEl.contains(e.target)) {
+		alert("오버레이 종료");
+                customOverlay3.setMap(null);
+            }
+
+        });
+    });	
+	
 </script>
