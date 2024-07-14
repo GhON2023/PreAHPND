@@ -12,11 +12,9 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 10; 
-    
-  }
+}
   
-  
-  .modal-chart-body {
+.modal-chart-body {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,4 +29,74 @@
     background-color: white;
     border-radius: 2px;
     /* z-index: 1001; */
+}
+
+.user-wrap {
+  width: 100%;
+  margin: 10px auto;
+  position: fixed; 
+  z-index: 10;
+}
+
+.blue-image {
+    width:100px;
+    height: 38px;
+    position: relative;
+    top: 50px;
+    left: 39%;
+    background-image: url("https://ghon2023.github.io/PreAHPND/Chk_blue_100x36.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    /* z-index: 10; */
+    /* vertical-align: middle; */
   }
+
+  .blue-selected {
+    width:100px;
+    height: 38px;
+    position: relative;
+    top: 50px;
+    left: 39%;
+    background-image: url("https://ghon2023.github.io/PreAHPND/UnChk_blue_100x36.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    /* z-index: 10; */
+  }
+
+  .blue-text {
+    position: relative;
+    top: 69px;
+    left: 40.4%;
+    width: 50px;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(38,101,239);
+    text-align: center;
+    user-select: none;
+    overflow: hidden;
+    /* z-index: 10; */
+    cursor: pointer;
+  }
+
+  .blue-text2 {
+    position: relative;
+    top: 68px;
+    left: 42.6%;
+    width: 50px;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    overflow: hidden;
+    /* z-index: 10; */
+    cursor: pointer;
+  }
+
