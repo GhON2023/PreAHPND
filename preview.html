@@ -445,13 +445,24 @@
     let body = document.querySelector('body');
     let chartBodyEl = document.querySelector(".modal-chart-body");
     //let iconDetailBodyEl = document.querySelector(".iconDetail");
-    //let iconDetailBodyEl2 = document.querySelector("iconDetail");
     let iconDetailBodyEl = document.getElementsByClassName("iconDetail");
+    //console.dir(body);
 
-    console.dir(body);
-    console.dir(chartBodyEl);
-    console.dir(iconDetailBodyEl);
-    //console.dir(iconDetailBodyEl2);
+    function openChart() {
+
+        var modal = document.querySelector('.modal-chart');
+        modal.style.display = 'block';
+        body.style.overflow = 'hidden';
+
+        // modal-body 이외의 영역을 마우스 클릭 시 modal 종료
+        document.addEventListener('mouseup', (e) => {
+            if (!chartBodyEl.contains(e.target)) {
+                modal.style.display = 'none';
+                body.style.overflow = 'auto';
+            }
+       });
+    }
+
 
     kakao.maps.event.addListener(blueMarkers[12], 'click', function() {
 
