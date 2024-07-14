@@ -69,9 +69,9 @@
   }
 
   .blue-text {
-    position: relative;
-    top: 69px;
-    left: 40.4%;
+    position: absolute;
+    top: 75px;
+    left: 40.5%;
     width: 50px;
     transform: translate(-50%, -50%);
     font-size: 16px;
@@ -85,8 +85,8 @@
   }
 
   .blue-text2 {
-    position: relative;
-    top: 68px;
+    position: absolute;
+    top: 75px;
     left: 42.6%;
     width: 50px;
     transform: translate(-50%, -50%);
