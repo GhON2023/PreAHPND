@@ -412,11 +412,12 @@
     let body = document.querySelector('body');
     let chartBodyEl = document.querySelector(".modal-chart-body");
     //let iconDetailBodyEl = document.querySelector(".iconDetail");
-    let iconDetailBodyEl2 = document.querySelector("iconDetail");
+    //let iconDetailBodyEl2 = document.querySelector("iconDetail");
+    let iconDetailBodyEl = document.getElementsByClassName("iconDetail");
 
     console.dir(body);
     console.dir(chartBodyEl);
-    //console.dir(iconDetailBodyEl);
+    console.dir(iconDetailBodyEl);
     //console.dir(iconDetailBodyEl2);
 
     kakao.maps.event.addListener(blueMarkers[12], 'click', function() {
@@ -449,7 +450,7 @@
 
     kakao.maps.event.addListener(blueMarkers[2], 'click', function() {
 
-	let iconDetailBodyEl = document.querySelector(".iconDetail");
+	//let iconDetailBodyEl = document.querySelector(".iconDetail");
 	    
         //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
 	customOverlay1.setMap(null);
