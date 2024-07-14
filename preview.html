@@ -67,7 +67,7 @@
 </body>
 </html>
 
-<script>
+<script>   
 
 	const ctx = document.getElementById('myChart');
 
@@ -283,6 +283,70 @@
 			redMarkers[i].setMap(map);
 		}
 	}
+
+    var n1 = 1;
+    var n2 = 1;
+    var n3 = 1;
+    var n4 = 1;
+
+    function divBtn(type) {
+    	var blue = document.getElementById("blue-image");
+        var brown = document.getElementById("brown-image");
+        var orange = document.getElementById("orange-image");
+        var red = document.getElementById("red-image");
+
+        if (type == 'blue') {
+        	// Checked 상태
+            if (n1 == 1) {
+            	blue.className = 'blue-selected';
+                //brown.className = 'brown-image';
+		setBlueMarkers(null); 
+                n1 = 0;
+            } else if (n1 == 0) {
+            	// UnChecked 상태
+                blue.className = "blue-image";
+                //brown.className = '';
+		setBlueMarkers(map);
+                n1 = 1;
+            }
+        } else if (type == 'brown') {
+        	// Checked 상태
+            if (n2 == 1) {
+                brown.className = 'brown-selected';
+		setBrownMarkers(null);
+                n2 = 0;
+            } else if (n2 == 0) {
+            	// UnChecked 상태
+                brown.className = "brown-image";
+		setBrownMarkers(map);
+                n2 = 1;
+            }
+        } else if (type == 'orange') {
+        	// Checked 상태
+            if (n3 == 1) {
+            	orange.className = 'orange-selected';
+		setOrangeMarkers(null);
+                n3 = 0;
+            } else if (n3 == 0) {
+            	// UnChecked 상태
+                orange.className = "orange-image";
+		setOrangeMarkers(map);
+                n3 = 1;
+            }
+        } else if (type == 'red') {
+        	// Checked 상태
+            if (n4 == 1) {
+            	red.className = 'red-selected';
+		setRedMarkers(null);
+                n4 = 0;
+            } else if (n4 == 0) {
+            	// UnChecked 상태
+                red.className = "red-image";
+		setRedMarkers(map);
+                n4 = 1;
+            }
+        }
+    }
 
 
 
