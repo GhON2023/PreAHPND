@@ -411,7 +411,7 @@
     //var position = new kakao.maps.LatLng(35.3467973, 129.3249957);
     let body = document.querySelector('body');
     let chartBodyEl = document.querySelector(".modal-chart-body");
-    let iconDetailBodyEl = document.querySelector(".iconDetail");
+    //let iconDetailBodyEl = document.querySelector(".iconDetail");
     let iconDetailBodyEl2 = document.querySelector("iconDetail");
 
     console.dir(body);
@@ -448,6 +448,9 @@
                 });
 
     kakao.maps.event.addListener(blueMarkers[2], 'click', function() {
+
+	let iconDetailBodyEl = document.querySelector(".iconDetail");
+	    
         //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
 	customOverlay1.setMap(null);
 	customOverlay2.setMap(null);
