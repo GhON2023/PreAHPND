@@ -29,6 +29,36 @@
 
 <script>
 
+	const ctx = document.getElementById('myChart');
+
+	new Chart(ctx, {
+		animationEnabled: true,
+		type: 'line',
+		data: {
+		labels: ['2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07'],
+		datasets: [{
+			label: 'My First Dataset',
+			data: [4, 8, 6, 2, 1, 1, 0.5, 0.5, 1, 2, 3, 4],
+			borderColor: 'rgba(240, 128, 128, 1)',
+			borderWidth: 2
+		}]
+		},
+		options: {
+		responsive: false,      // 차크 크기 조정 시 해당 옵션 추가
+		scales: {
+			x: {
+			beginAtZero: true
+			},  
+			y: {
+			beginAtZero: true,
+			suggestedMin: 0,
+			suggestedMax: 10,
+			}
+		}
+		}
+	});
+	
+
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 	    mapOption = {
 			center: new kakao.maps.LatLng(34.9949089, 126.3342369), // 지도의 중심좌표			    
