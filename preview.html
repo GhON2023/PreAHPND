@@ -19,6 +19,55 @@
        </div>
     </div>    
 
+    <div class="modal">
+        <div class="modal-body">
+            <div class="modal-title">대처방안 정보</div>
+            <div class="modal-blue-image"></div>
+            <div class="blue-content">
+                <t1 style="color: rgb(38,101,239); font-size:14px" >관심(0~10)<br></t1>
+                <t2 style="color:rgb(48, 48, 48); font-size:12px" >급성간췌장괴사병 발생 가능성이 낮은 상태
+            </div>
+            <hr width="90%" color:rgb(119, 106, 106)/>
+
+            <div class="modal-brown-image"></div>
+            <div class="brown-content">
+                <t1 style="color: rgb(211,181,31); font-size:14px" >주의(11~40)<br></t1>
+                <t2 style="color:rgb(48, 48, 48); font-size:12px" >양식시설물, 사육도구, 장화 등을 주기적으로 소독한다.<br>
+                    초기 증상이 발견되거나 질병 감염이 의심되는 개체의 경우<br>
+                    관할 검사소에 의뢰하여 질병 검사를 진행한다.</t2>
+            </div>
+            <hr width="90%" color:rgb(119, 106, 106)/>
+
+            <div class="modal-orange-image"></div>
+            <div class="orange-content">
+                <t1 style="color: rgb(253,106,15); font-size:14px" >경계(41~80)<br></t1>
+                <t2 style="color:rgb(48, 48, 48); font-size:12px" >양식시설물, 사육도구, 장화 등을 사용 전∙후 소독한다.<br>
+                    사육수를 보충하기 전에는 반드시 보충수를 소독한 후 사용한다.<br>
+                    초기 증상이 발견되거나 질병 감염이 의심되는 개체의 경우<br>
+                    관할 검사소에 의뢰하여 질병 검사를 진행한다.</t2>
+            </div>
+            <hr width="90%" color:rgb(119, 106, 106)/>
+		
+        <div class="modal-red-image"></div>
+        <div class="red-content">
+            <t1 style="color: rgb(253,0,23); font-size:14px" >위험(81~100)<br></t1>
+            <t2 style="color:rgb(48, 48, 48); font-size:12px" >양식시설물, 사육도구, 장화 등을 사용 전∙후 소독한다.<br>
+                사육수를 보충할 때에는 보충수를 소독한 후 사용한다.<br>
+                폐사한 개체는 신속히 제거하며, 병원체 확산방지를 위해 안전하게 처리한다.<br>
+                초기 증상이 별견되거나 질병 감염이 의심되는 개체의 경우<br>
+                관할 검사소에 의뢰하여 질병 검사를 진행한다.</t2>
+        </div>
+
+        <!-- <div class="cmd">
+          <input type="button" name="btnclose" class="button" value="닫기" onclick="closeModal()" >
+        </div> -->
+
+      </div>
+
+    </div>
+
+	
+
     <!-- 카카오 맵 크기 -->
     <div id="map" style="width:100%;height:100vh;"></div>
     <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e1d481163c25821c1aafcee9d7a1fb65"></script>
@@ -443,10 +492,33 @@
 
     //var position = new kakao.maps.LatLng(35.3467973, 129.3249957);
     let body = document.querySelector('body');
+    let modalBodyEl = document.querySelector(".modal-body");
     let chartBodyEl = document.querySelector(".modal-chart-body");
     //let iconDetailBodyEl = document.querySelector(".iconDetail");
     let iconDetailBodyEl = document.getElementsByClassName("iconDetail");
     //console.dir(body);
+
+    function showModal() {
+        var modal = document.querySelector('.modal');
+        /* console.dir(modal);
+        console.dir(modalT); */
+        modal.style.display = 'block';
+        body.style.overflow = 'hidden';
+    
+        // modal-body 이외의 영역을 마우스 클릭 시 modal 종료
+        document.addEventListener('mouseup', (e) => {
+            if (!modalBodyEl.contains(e.target)) {
+                modal.style.display = 'none';
+                body.style.overflow = 'auto';
+            }
+        });
+    }
+
+    function closeModal() {
+        var modal = document.querySelector('.modal');
+        modal.style.display = 'none';
+        body.style.overflow = 'hidden';
+    }
 
     function openChart() {
 
