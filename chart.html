@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <canvas id="myChart" width="500" height="300"></canvas>
+    </div>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>\ -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07'],
+            datasets: [{
+              label: 'My First Dataset',
+              data: [4, 8, 6, 2, 1, 1, 0.5, 0.5, 1, 2, 3, 4],
+              borderColor: 'rgba(240, 128, 128, 1)',
+              borderWidth: 2
+            }]
+          },
+          options: {
+            responsive: false,      // 차크 크기 조정 시 해당 옵션 추가
+            scales: {
+              x: {
+                beginAtZero: true
+              },  
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+
+
+</body>
+</html>
