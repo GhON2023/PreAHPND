@@ -31,6 +31,159 @@
     /* z-index: 1001; */
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+
+.modal-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+
+  width: 550px;
+  height: 550px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.modal-body > .modal-title{
+
+  width: 100%;
+  height: 40px;
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  display: flex;
+
+  background-color:  #131349;    
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.modal-body > .modal-blue-image{
+  display: flex;
+  width:60px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-image: url("./marker-blue-active.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;  
+  z-index: 999;
+}
+
+.modal-body > .blue-content {
+
+  margin-top: -35px;
+  margin-left: 72px;
+  
+}
+
+.modal-body > .modal-brown-image{
+  width:60px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-image: url("./marker-brown-active.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;  
+}
+
+.modal-body > .brown-content {
+
+  margin-top: -35px;
+  margin-left: 72px;
+  
+}
+
+.modal-body > .modal-orange-image{
+  width:60px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-image: url("./marker-orange-active.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;  
+}
+
+.modal-body > .orange-content {
+
+  margin-top: -35px;
+  margin-left: 72px;
+  
+}
+
+.modal-body > .modal-red-image{
+  width:60px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-image: url("./marker-red-active.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;  
+}
+
+.modal-body > .red-content {
+
+  margin-top: -35px;
+  margin-left: 72px;
+  
+}
+
+.modal-body > .cmd {
+  /*bottom: 0;*/
+  margin-top: 10px;
+  min-height: 40px;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  border-radius: 0 0 15px 15px;
+  min-height: 40px;
+  text-align: right;
+}
+
+.modal-body > .cmd .button {
+  width: 100px;
+  border-radius: 8px;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+}
+
+.modal-body  > .cmd .button:hover {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+
 .user-wrap {
   width: 100%;
   margin: 10px auto;
