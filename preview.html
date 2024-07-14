@@ -451,6 +451,7 @@
 	// iconDetail 이외의 영역을 마우스 클릭 시 modal 종료
         document.addEventListener('mouseup', (e) => {
 
+	    console.dir(iconDetailBodyEl);
             if (!iconDetailBodyEl.contains(e.target)) {
 		alert("오버레이 종료");
                 customOverlay3.setMap(null);
