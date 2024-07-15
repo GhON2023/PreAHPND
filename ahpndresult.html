@@ -140,11 +140,11 @@
 		'       <value_4>조치 완료</value_4>' +
 
 		'   </div>' +
-                '   <div class="title" onclick="openChart()">' + 
-                '       <t1>예측치수 차트</t1>' + 
+                '   <div class="button-1" onclick="openChart()">' + 
+                '       <t1>세부 정보</t1>' + 
 		'   </div>' +
-		'   <div class="title-1" onclick="showModal()">' + 
-                '       <t1>단계별 대응요령</t1>' + 
+		'   <div class="button-2" onclick="showModal()">' + 
+                '       <t1>최근 발생 현황</t1>' + 
 		'   </div>' +
 		'</div>';
 
@@ -164,10 +164,10 @@
     });
 
     let body = document.querySelector('body');
-    let chartBodyEl = document.querySelector(".modal-chart-body");
-
+    //let chartBodyEl = document.querySelector(".modal-chart-body");
     let modalBodyEl = document.querySelector(".modal-body");
 
+    /*
     kakao.maps.event.addListener(marker, 'click', function() {
 
        var modal = document.querySelector('.modal-chart');
@@ -184,6 +184,7 @@
 	    
        alert("TEST");		    
     });
+    */
 
 
     kakao.maps.event.addListener(marker2, 'click', function() {
