@@ -114,7 +114,7 @@
 
     // 지도에 마커를 생성하고 표시한다		
     var marker = new kakao.maps.Marker({
-        position: new kakao.maps.LatLng(36.589336, 126.3148374), // 마커의 좌표 1  전남 무안군 망운면 송현리 1070-5   경계-1
+        position: new kakao.maps.LatLng(36.589336, 126.3148374), // 마커의 좌표 1  충남 태안군 남면 신온리 드르니항   경계-1
         image : markerImageRed,    // 마커를 표시할 지도 객체
         map: map // 마커를 표시할 지도 객체
     });
@@ -125,6 +125,42 @@
         position: new kakao.maps.LatLng(35.3467973, 129.3249957), // 마커의 좌표 2  울산광역시 울주군 서생면 신암리 291-54
         image : markerImageRed,    // 마커를 표시할 지도 객체
         map: map // 마커를 표시할 지도 객체
+    });
+
+   var result = '<div class="iconDetail">' +
+		'   <div class="status">' +
+		'       <title_1>위치</title_1>' +
+		'       <title_2>면적</title_2>' +
+		'       <title_3>양식형태</title_3>' +
+		'       <title_4>현재상황</title_4>' +       
+		
+		'       <value_1>태안군 남면 드르니항</value_1>' +
+		'       <value_2>1,389m2</value_2>' +
+		'       <value_3>축제식 양식장</value_3>' +
+		'       <value_4>조치 완료</value_4>' +
+
+		'   </div>' +
+                '   <div class="title" onclick="openChart()">' + 
+                '       <t1>예측치수 차트</t1>' + 
+		'   </div>' +
+		'   <div class="title-1" onclick="showModal()">' + 
+                '       <t1>단계별 대응요령</t1>' + 
+		'   </div>' +
+		'</div>';
+
+    // 커스텀 오버레이가 표시될 위치입니다.
+    var position1 = new kakao.maps.LatLng(marker.getPosition().getLat(), marker.getPosition().getLng());
+    var customOverlay1 = new kakao.maps.CustomOverlay({
+                             position: position1,
+		             content: result,
+		             xAnchor: 0.5,
+		             yAnchor: 0.5
+    });
+
+    kakao.maps.event.addListener(marker, 'click', function() {
+        //var position = new kakao.maps.LatLng(markerBluePositions[i].Ma, markerBluePositions[i].La);
+	customOverlay1.setMap(null);
+	customOverlay1.setMap(map);
     });
 
     let body = document.querySelector('body');
