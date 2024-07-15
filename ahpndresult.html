@@ -45,6 +45,46 @@
       </div>
     </div>
 
+    <!-- 최근 현황 모달 창-->
+    <div class="modal-list">
+        <div class="modal-list-body">
+            <div class="list-container">
+                <div class="list-title">발생 일자</div>
+                <div class="list-title">발생 위치</div>
+                <div class="list-title">현재 상황</div>
+                <div class="list-title">비고</div>
+                
+                <div class="list-item">&nbsp;2021-06-04</div>
+                <div class="list-item">&nbsp;태안군 남면 드르니항</div>
+                <div class="list-item">&nbsp;방역조치 완료</div>
+                <div class="list-item">
+                    <div class="list-item-button" onclick="showDetail()">
+                        <t1>세부 정보</t1>
+                    </div>
+                </div>
+                    
+                <div class="list-item">&nbsp;2023-09-01</div>
+                <div class="list-item">&nbsp;태안군 남면 드르니항</div>
+                <div class="list-item">&nbsp;방역조치 완료</div>
+                <div class="list-item">
+                    <div class="list-item-button" onclick="showDetail()">
+                        <t1>세부 정보</t1>
+                    </div>
+                </div>
+
+                <div class="list-item">&nbsp;2024-07-07</div>
+                <div class="list-item">&nbsp;태안군 남면 드르니항</div>
+                <div class="list-item">&nbsp;진행중</div>
+                <div class="list-item">
+                    <div class="list-item-button" onclick="showDetail()">
+                        <t1>세부 정보</t1>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
     <!-- datepicker -->
     <input type="date" id="currentDate">
 
@@ -166,6 +206,7 @@
     let body = document.querySelector('body');
     //let chartBodyEl = document.querySelector(".modal-chart-body");
     let modalBodyEl = document.querySelector(".modal-body");
+    let modallistBodyEl = document.querySelector(".modal-list-body");
 
     function showDetail() {
         var modal = document.querySelector('.modal');
@@ -182,6 +223,23 @@
             }
          });
     }
+
+    function showModal() {
+        var modal = document.querySelector('.modal-list');
+        /* console.dir(modal);
+        console.dir(modalT); */
+        modal.style.display = 'block';
+        body.style.overflow = 'hidden';
+    
+        // modal-list-body 이외의 영역을 마우스 클릭 시 modal 종료
+        document.addEventListener('mouseup', (e) => {
+            if (!modallistBodyEl.contains(e.target)) {
+                    modal.style.display = 'none';
+                    body.style.overflow = 'auto';
+            }
+        });
+    }
+
 
     /*
     kakao.maps.event.addListener(marker, 'click', function() {
@@ -202,7 +260,7 @@
     });
     */
 
-
+    /*
     kakao.maps.event.addListener(marker2, 'click', function() {
 
       var modal = document.querySelector('.modal');
@@ -216,7 +274,7 @@
               body.style.overflow = 'auto';
           }
       });
-    });
+    }); */
 
 
 </script>
