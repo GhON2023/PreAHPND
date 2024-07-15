@@ -190,3 +190,155 @@ input[type="date"] {
     cursor: pointer;
     border-radius: 3px;
 }
+
+.iconDetail {
+    position: relative;
+    flex-direction: column;
+    /*bottom: 42px;*/
+    /* border: 1px solid #ccc; */
+    /* border-bottom: 2px solid #ddd; */
+    float: left;
+    background: white;
+    width: 263px;
+    height: 225px;
+    border-radius: 5px;
+    /* background-image: url("./box_movie_white_265x215.png"); */
+    background: url("https://ghon2023.github.io/PreAHPND/box_movie_white_265x225.png");
+  }
+
+  .status {
+    margin: 5px 5px 5px 7px;
+    /* height: 67px; */
+    height: 158px;
+    width: 246px;
+    display: grid;
+    grid-template-columns: 90px 150px;
+    grid-template-rows: repeat(4, 35px);
+
+    gap: 5px;
+    color: rgb(46, 46, 46);
+    text-align: center;
+    /* background: rgb(202, 201, 209); */
+    /* background: white; */
+    background: rgb(255, 253, 253);
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid rgb(236, 227, 227);
+  }
+  
+  .status title_1 {
+    grid-column: 1;
+    grid-row: 1;
+    /* height: 30px;
+    width: 90px; */
+    background: rgb(202, 201, 209);
+    padding-top: 8px;
+
+  }
+
+  .status title_2 {
+    grid-column: 1;
+    grid-row: 2;
+
+    background: rgb(202, 201, 209);
+    padding-top: 8px;
+    /* margin-top: 2px; */
+    
+    /*border: 1px solid white;*/
+  }
+
+  .status title_3 {
+    grid-column: 1;
+    grid-row: 3;
+    background: rgb(202, 201, 209);
+    padding-top: 8px;
+
+  }
+
+  .status title_4 {
+    grid-column: 1;
+    grid-row: 4;
+    background: rgb(202, 201, 209);
+    padding-top: 8px;
+
+  }
+
+  .status value_1 {
+    grid-column: 2;
+    grid-row: 1;
+    color: rgb(66, 64, 64);
+    font-weight: normal;
+    font-size: 12px;
+    background: rgb(231, 221, 221);
+    text-align: start;
+    padding-top: 8px;
+  }
+
+  .status value_2 {
+    grid-column: 2;
+    grid-row: 2;
+    color: rgb(66, 64, 64);
+    font-weight: normal;
+    font-size: 12px;
+    background: rgb(231, 221, 221);
+    text-align: start;
+    padding-top: 8px;
+  }
+
+  .status value_3 {
+    grid-column: 2;
+    grid-row: 3;
+    color: rgb(66, 64, 64);
+    font-weight: normal;
+    font-size: 12px;
+    background: rgb(231, 221, 221);
+    text-align: start;
+    padding-top: 8px;
+    
+  }
+
+  .status value_4 {
+    grid-column: 2;
+    grid-row: 4;
+    padding-top: 8px;
+    color: rgb(18, 87, 236);
+    font-weight: normal;
+    font-size: 12px;
+    font-weight: bold;
+    
+    background: rgb(231, 221, 221);
+    text-align: start;
+  }
+
+  .button-1 {
+    margin-top: 0px;
+    margin-left: 15px;
+    width: 110px;
+    height: 28px;
+    padding-top: 8px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(38,101,239);
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .button-2 {
+    /* position: fixed; */
+    margin-top: -36px;
+    margin-left: 135px;
+    width: 110px;
+    height: 28px;
+    padding-top: 8px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(24,26,42);
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
